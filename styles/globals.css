@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* This style will apply a line under the text */
+.group::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #230562; /* Tailwind indigo-600 or any color you prefer */
+    transition: width 0.3s ease-in-out;
+    font-weight: 400;
+  }
+  
+  .group:hover::after {
+    width: 100%;
+  }
+  
+  
