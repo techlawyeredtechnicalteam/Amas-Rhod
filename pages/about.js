@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
-import Image from "next/image"; 
+import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/Layout";
 
@@ -10,8 +10,8 @@ const slideUp = {
   visible: (i = 1) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.15, duration: 0.6, ease: 'easeOut' },
-  }),
+    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" }
+  })
 };
 
 const scaleIn = {
@@ -19,43 +19,47 @@ const scaleIn = {
   visible: (i = 1) => ({
     opacity: 1,
     scale: 1,
-    transition: { delay: i * 0.2, duration: 0.6, ease: 'easeOut' },
-  }),
+    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" }
+  })
 };
 
 export default function AboutUs() {
   const focusAreas = [
     {
-      title: 'Immigration',
+      title: "Maritime law",
       description:
-        'We provide comprehensive legal support for individuals and businesses navigating immigration processes, visa applications, residency, and citizenship matters.',
+        "Providing legal advisory and representation across maritime operations, including contract drafting and review for shipping, haulage and logistics transactions, demurrage and freight disputes, vessel chartering agreements, cargo claims, regulatory compliance, and enforcement of maritime rights before competent tribunals, in line with the Admiralty Jurisdiction Act and other applicable laws."
     },
     {
-      title: 'Corporate & Commercial Law',
+      title: "Entertainment law",
       description:
-        'Our firm guides businesses through regulatory compliance, M&A transactions, governance, and commercial contracts, ensuring sustainable growth and legal assurance.',
+        "Providing comprehensive legal support to creatives and entertainment businesses in the negotiation, drafting, and enforcement of contracts, intellectual property protection, talent representation, and regulatory compliance across the media and entertainment industry."
     },
     {
-      title: 'Human Rights & Social Justice',
+      title: "Immigration Law",
       description:
-        'We advocate for individuals facing discrimination, injustice, or human rights violations, ensuring their voices are heard and rights protected.',
+        "Providing legal representation and advisory services on immigration matters, including visa applications, permanent residency and citizenship processing, and compliance with statutory and administrative immigration requirements."
     },
     {
-      title: 'Real Estate & Construction Law',
+      title: "Family law",
       description:
-        'We provide legal expertise in property transactions, leasing, development, and land disputes, ensuring compliance and protecting your investments.',
+        "Providing legal advisory and representation in family law matters, including marriage validation, dissolution of marriage, child custody and maintenance proceedings, domestic abuse and violence, domestic partnership agreements, inheritance rights, Wills and probate, and enforcement of family-related court orders, in accordance with applicable statutory and customary law frameworks."
     },
+    {
+      title: "Property law",
+      description:
+        "Providing legal advisory on real estate transactions, including title investigation, land verification, property documentation, contract drafting, tenancy structuring, and dispute prevention, in accordance with relevant land and conveyancing laws."
+    }
   ];
 
   return (
     <Layout>
       <div className="bg-gray-50 min-h-screen py-20 px-6">
         <Head>
-          <title>Honoredge Legal Practice | About Us</title>
+          <title>Amas & Rhod Law | About Us</title>
         </Head>
 
         <div className="max-w-7xl mx-auto space-y-24">
-
           {/* Hero Section */}
           <motion.section
             initial="hidden"
@@ -65,10 +69,10 @@ export default function AboutUs() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 font-garamond">
-              About Honoredge Legal Practice
+              About Amas & Rhod Law
             </h1>
             <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-              More than a law firm — we are passionate advocates driven by excellence, innovation, and justice.
+              Law in action. Protection in motion; Our Lawyers are working!
             </p>
           </motion.section>
 
@@ -77,18 +81,18 @@ export default function AboutUs() {
             {[
               {
                 title: "Our Mission",
-                text: "We are committed to delivering innovative, client-focused legal solutions, grounded in integrity and excellence.",
-                image: "/mission.png",
+                text: "To empower clients with practical and top-tier legal solutions, delivered with confidence, insight, and strategic clarity. We are committed to protecting our clients’ interests, preventing disputes, and providing decisive representation across every legal challenge.",
+                image: "/mission.png"
               },
               {
                 title: "Our Vision",
                 text: "To redefine the legal landscape by empowering individuals and businesses through exceptional advocacy and trusted counsel.",
-                image: "/vision.png",
+                image: "/vision.png"
               },
               {
                 title: "Our Values",
                 text: "Integrity, diligence, excellence, empathy, and innovation are the core principles that guide every aspect of our practice.",
-                image: "/values.png",
+                image: "/values.png"
               }
             ].map((item, i) => (
               <motion.div
@@ -101,10 +105,17 @@ export default function AboutUs() {
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow"
               >
                 <div className="h-52 relative">
-                  <Image src={item.image} alt={item.title} fill className="object-cover" />
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-3">{item.title}</h3>
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+                    {item.title}
+                  </h3>
                   <p className="text-sm text-gray-600">{item.text}</p>
                 </div>
               </motion.div>
@@ -124,7 +135,12 @@ export default function AboutUs() {
             </h2>
 
             <div className="h-72 w-full relative rounded-2xl overflow-hidden shadow-md mb-14">
-              <Image src="/focus.png" alt="Our Practice Areas" fill className="object-cover" />
+              <Image
+                src="/focus.png"
+                alt="Our Practice Areas"
+                fill
+                className="object-cover"
+              />
             </div>
 
             <div className="grid md:grid-cols-2 gap-10">
@@ -138,13 +154,16 @@ export default function AboutUs() {
                   variants={scaleIn}
                   className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all"
                 >
-                  <h4 className="text-xl font-bold text-primary-300">{area.title}</h4>
-                  <p className="mt-2 text-sm text-gray-700">{area.description}</p>
+                  <h4 className="text-xl font-bold text-primary-300">
+                    {area.title}
+                  </h4>
+                  <p className="mt-2 text-sm text-gray-700">
+                    {area.description}
+                  </p>
                 </motion.div>
               ))}
             </div>
           </motion.section>
-
         </div>
       </div>
     </Layout>
