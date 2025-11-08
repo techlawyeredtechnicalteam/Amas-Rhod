@@ -6,14 +6,10 @@ import { StarIcon } from "@heroicons/react/24/solid";
 import Layout from "../components/Layout";
 import Image from "next/image";
 
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useAnimation } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-};
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const focusAreas = [
   {
@@ -30,39 +26,72 @@ const focusAreas = [
     title: "Immigration Law",
     description:
       "Providing legal representation and advisory services on immigration matters, including visa applications, permanent residency and citizenship processing, and compliance with statutory and administrative immigration requirements."
-  },
-  {
-    title: "Family law",
-    description:
-      "Providing legal advisory and representation in family law matters, including marriage validation, dissolution of marriage, child custody and maintenance proceedings, domestic abuse and violence, domestic partnership agreements, inheritance rights, Wills and probate, and enforcement of family-related court orders, in accordance with applicable statutory and customary law frameworks."
-  },
-  {
-    title: "Property law",
-    description:
-      "Providing legal advisory on real estate transactions, including title investigation, land verification, property documentation, contract drafting, tenancy structuring, and dispute prevention, in accordance with relevant land and conveyancing laws."
   }
+  // {
+  //   title: "Family law",
+  //   description:
+  //     "Providing legal advisory and representation in family law matters, including marriage validation, dissolution of marriage, child custody and maintenance proceedings, domestic abuse and violence, domestic partnership agreements, inheritance rights, Wills and probate, and enforcement of family-related court orders, in accordance with applicable statutory and customary law frameworks."
+  // },
+  // {
+  //   title: "Property law",
+  //   description:
+  //     "Providing legal advisory on real estate transactions, including title investigation, land verification, property documentation, contract drafting, tenancy structuring, and dispute prevention, in accordance with relevant land and conveyancing laws."
+  // }
 ];
 
-// Reusable AnimatedCard component
-function AnimatedCard({ title, description, delay }) {
-  return (
-    <motion.div
-      variants={cardVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ delay }}
-      className="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-primary-200 hover:shadow-lg transition duration-300 ease-in-out"
-    >
-      <h4 className="text-xl font-garamond font-semibold text-white mb-2">
-        {title}
-      </h4>
-      <p className="text-gray-400 text-sm">{description}</p>
-    </motion.div>
-  );
-}
-
+const testimonials = [
+  {
+    name: "Collins Dike ",
+    quote:
+      "My encounter with the Firm was one of life saving! The lawyers treated my case with much importance and didn’t make me feel alone,  from start to finish. Services were timely and top-notch."
+  },
+  {
+    name: "Gaye Gillet",
+    quote:
+      "They are  approachable, professional and are completely dedicated to resolving your issues in a competent, timely way."
+  },
+  {
+    name: "Richard Uzoeghelu ",
+    quote:
+      "I requested contract review and contract drafting services and this was done in no time with accuracy. "
+  },
+  {
+    name: "Mr Joseph Akinsusi",
+    quote:
+      "From my experience with Amas and Rhod Law, what  truly sets them apart is their commitment to the success of my case which gave me absolute peace of mind"
+  },
+  {
+    name: "Philip Okwor",
+    quote:
+      "I wholeheartedly recommend AMAS and RHOD LAW firm to anyone seeking reliable, results-oriented and trustworthy legal representation"
+  }
+];
 export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto testimonials every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
+
+  // const goToSlide = (index) => {
+  //   setCurrentIndex(index);
+  // };
+
+  const goToPrevious = () => {
+    setCurrentIndex(
+      (prev = (prev - 1 + testimonials.length) % testimonials.length)
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true }); // animate only once
   const controls = useAnimation();
@@ -72,11 +101,6 @@ export default function Home() {
       controls.start("visible");
     }
   }, [isInView, controls]);
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }
-  };
 
   return (
     <Layout>
@@ -110,7 +134,7 @@ export default function Home() {
           {/* About Section */}
           <section id="about" className="py-24 bg-gray-50 px-6">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="flex justify-center">
+              <div className="">
                 <Image
                   src="/logo.png"
                   alt="Amas & Rhod Law Logo"
@@ -128,6 +152,34 @@ export default function Home() {
                   remain committed to protecting our clients&apos; interests
                   with clarity and eﬃciency.
                 </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Practice Areas */}
+          <section
+            id="practice-areas"
+            className="bg-blue-950 text-white py-24 px-6 md:px-20"
+          >
+            <div className="max-w-7xl mx-auto text-center">
+              <h2 className="text-4xl font-garamond md:text-5xl font-bold mb-6">
+                Our <span className="text-black italic">Areas of Focus</span>
+              </h2>
+              <p className="text-gray-400 text-lg mb-16">
+                Expertise across key fields to meet your unique legal needs.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                {focusAreas.map((area, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-white rounded-lg p-8 hover:bg-gray-50 transition duration-300 shadow-lg"
+                  >
+                    <h4 className="text-xl font-bold mb-4 text-black">
+                      {area.title}
+                    </h4>
+                    <p className="text-black">{area.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
@@ -186,85 +238,67 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Practice Areas */}
-          <section
-            id="practice-areas"
-            className="bg-gray-900 text-white py-24 px-6 md:px-20"
-          >
-            <div className="max-w-7xl mx-auto text-center">
-              <h2 className="text-4xl font-garamond md:text-5xl font-bold mb-6">
-                Our{" "}
-                <span className="text-primary-200 italic">Areas of Focus</span>
-              </h2>
-              <p className="text-gray-400 text-lg mb-16">
-                Expertise across key fields to meet your unique legal needs.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                {focusAreas.map((area, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-gray-800 rounded-lg p-8 hover:bg-gray-700 transition duration-300 shadow-lg"
-                  >
-                    <h4 className="text-xl font-bold mb-4">{area.title}</h4>
-                    <p className="text-gray-300">{area.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Testimonials */}
-          <section className="bg-[#e7e3db] py-24 px-6 md:px-16 text-center">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-garamond md:text-5xl font-bold mb-6 text-gray-900">
+          <section className="bg-blue-950 py-24 px-6 md:px-16 text-center">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-4xl font-garamond md:text-5xl font-bold mb-6 text-white">
                 Client Testimonials
               </h2>
-              <p className="text-lg text-gray-700 mb-16">
+              <p className="text-lg text-gray-400 mb-16">
                 Hear directly from those we've helped achieve success.
               </p>
 
-              {/* Testimonials Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                {[
-                  {
-                    name: "Bukki Aderogba",
-                    quote:
-                      "Working with Amas & Rhod Law was seamless. Their dedication and attention to detail were unmatched."
-                  },
-                  {
-                    name: "Chinedu Godswill",
-                    quote:
-                      "They listened, strategized, and delivered outstanding results. We couldn’t have asked for better support."
-                  },
-                  {
-                    name: "Emmanuel Folorunsho",
-                    quote:
-                      "Professional, responsive, and trustworthy. My case was always handled with utmost care."
-                  }
-                ].map((testimonial, index) => (
+              {/* Testimonials slider */}
+              <div className="relative">
+                {/* Testimonial Cards Container */}
+                <div className="overflow-hidden">
                   <div
-                    key={index}
-                    className="bg-white p-8 rounded-lg shadow-md flex flex-col justify-between h-full"
+                    className="flex transition-transform duration-700 ease-in-out"
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                   >
-                    <div className="text-4xl text-primary-200 mb-4">“</div>
-                    <p className="text-gray-800 text-sm leading-relaxed mb-6">
-                      {testimonial.quote}
-                    </p>
+                    {testimonials.map((testimonial, index) => (
+                      <div key={index} className="w-full flex-shrink-0 px-4">
+                        <div className="bg-white p-8 md:p-12 rounded-lg shadow-md mx-auto max-w-3xl">
+                          <div className="text-5xl text-blue-950 mb-4">"</div>
+                          <p className="text-black text-base md:text-lg leading-relaxed mb-8">
+                            {testimonial.quote}
+                          </p>
 
-                    {/* ⭐ Star Rating */}
-                    <div
-                      className="flex items-center justify-center space-x-1 mb-4"
-                      aria-label="5 star rating"
-                    >
-                      {[...Array(5)].map((_, i) => (
-                        <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
-                      ))}
-                    </div>
+                          {/* Star Rating */}
+                          <div className="flex items-center justify-center space-x-1 mb-6">
+                            {[...Array(5)].map((_, i) => (
+                              <StarIcon
+                                key={i}
+                                className="w-5 h-5 text-yellow-400 fill-yellow-400"
+                              />
+                            ))}
+                          </div>
 
-                    <hr className="border-t border-gray-300 my-4" />
-                    <p className="italic text-gray-700">- {testimonial.name}</p>
+                          <hr className="border-t border-gray-300 my-6" />
+                          <p className="italic text-black font-medium">
+                            - {testimonial.name}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Navigation Arrows */}
+                <button
+                  onClick={goToPrevious}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+                  aria-label="Previous testimonial"
+                >
+                  <ChevronLeft className="w-6 h-6 text-black" />
+                </button>
+                <button
+                  onClick={goToNext}
+                  className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+                  aria-label="Next testimonial"
+                >
+                  <ChevronRight className="w-6 h-6 text-black" />
+                </button>
               </div>
             </div>
           </section>
@@ -282,7 +316,7 @@ export default function Home() {
               can support your legal journey.
             </p>
             <a
-              href="mailto:honoredgelp@gmail.com"
+              href="/contact"
               className="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300"
             >
               Contact Us

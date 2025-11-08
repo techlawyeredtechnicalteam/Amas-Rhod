@@ -71,8 +71,19 @@ export default function AboutUs() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 font-garamond">
               About Amas & Rhod Law
             </h1>
-            <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-              Law in action. Protection in motion; Our Lawyers are working!
+            <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto text-justify">
+              Established in May 2022, in Lagos State Nigeria, Amas & Rhod Law
+              is a modern legal practice focused on delivering practical and
+              accessible legal solutions across maritime, entertainment, family,
+              property and immigration law. We have advised and represented
+              clients ranging from truckers and logistics operators, transport
+              unions, to creatives within the entertainment industry and
+              property owners, handling contract reviews, regulatory compliance,
+              negotiations, ADR, and dispute prevention. Known for our
+              professionalism, proactiveness, in time responsiveness, and
+              affordability, we remain committed to protecting our clients&apos;
+              interests with clarity and efficiency.
+              {/* Law in action. Protection in motion; Our Lawyers are working! */}
             </p>
           </motion.section>
 
