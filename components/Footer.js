@@ -3,7 +3,7 @@ import logo from "../public/logo.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#230562] text-white py-16 px-6 md:px-20">
+    <footer className="bg-blue-950 text-white py-16 px-6 md:px-20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Logo and Firm Name */}
         <div className="flex flex-col items-center md:items-start">
@@ -51,9 +51,9 @@ export default function Footer() {
           <h4 className="text-2xl font-garamond mb-4">Office Hours</h4>
           <div className="text-lg">
             <p>Monday to Friday: 9:00 AM – 6:00 PM</p>
-            <p>Saturdays and Sundays: Closed</p>
             <p>
-              24 hour priority service for retainer clients in emergency only.
+              Saturdays and Sundays: Closed(Open to retainer clients in
+              emergency Only)
             </p>
           </div>
         </div>
@@ -93,14 +93,27 @@ export default function Footer() {
               >
                 <i className="fab fa-instagram"></i>
               </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Whatsapp"
+                className="hover:text-gray-300 focus:text-gray-300"
+              >
+                <i className="fab fa-whatsapp"></i>
+              </a>
             </div>
           </div>
 
-          {/* Accessibility Note */}
-          <p className="mt-6 md:mt-0 text-xs text-gray-300 max-w-sm">
-            We are an accessible workplace. Persons with disabilities are
-            welcome to apply.
-          </p>
+          {/* policy */}
+          <div className="mt-6 md:mt-0">
+            <a
+              href="/policy"
+              className="text-lg hover:underline focus:underline"
+            >
+              Legal Policies
+            </a>
+          </div>
         </div>
       </div>
     </footer>
