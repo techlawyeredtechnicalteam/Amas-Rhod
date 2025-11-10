@@ -138,8 +138,18 @@ const Contact = () => {
                     <h3 className="font-semibold text-gray-800 text-lg">
                       Phone
                     </h3>
-                    <p className="text-gray-600 text-sm">+234 805 543 8457</p>
-                    <p className="text-gray-600 text-sm">+234 706 241 0156</p>
+                    <a
+                      href="tel:+2348055438457"
+                      className="hover:underline text-sm"
+                    >
+                      +234 805 543 8457, <br />
+                    </a>
+                    <a
+                      href="tel:+2347062410156"
+                      className="hover:underline text-sm"
+                    >
+                      +234 706 241 0156 <br />
+                    </a>
                   </div>
                 </div>
 
@@ -149,9 +159,12 @@ const Contact = () => {
                     <h3 className="font-semibold text-gray-800 text-lg">
                       Email
                     </h3>
-                    <p className="text-gray-600 text-sm">
+                    <a
+                      href="mailto:info@amasandrhodlaw.com"
+                      className="text-gray-600 text-sm"
+                    >
                       info@amasandrhodlaw.com
-                    </p>
+                    </a>
                   </div>
                 </div>
               </div>
