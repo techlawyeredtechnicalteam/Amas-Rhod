@@ -3,8 +3,8 @@ import logo from "../public/logo.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-950 text-white py-16 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer className="bg-gray-100 text-gray-800 py-16 px-6 md:px-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Logo and Firm Name */}
         <div className="flex flex-col items-center md:items-start">
           <Image
