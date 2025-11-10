@@ -10,6 +10,9 @@ import { useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+// import Blog from "./blog";
+import { client } from "../lib/sanity";
+import BlogList from "./BlogList";
 
 const focusAreas = [
   {
@@ -20,7 +23,7 @@ const focusAreas = [
   {
     title: "Entertainment law",
     description:
-      "Providing comprehensive legal support to creatives and entertainment businesses in the negotiation, drafting, and enforcement of contracts, intellectual property protection, talent representation, and regulatory compliance across the media and entertainment industry."
+      "Providing comprehensive legal support to creati  ves and entertainment businesses in the negotiation, drafting, and enforcement of contracts, intellectual property protection, talent representation, and regulatory compliance across the media and entertainment industry."
   },
   {
     title: "Immigration Law",
@@ -66,7 +69,34 @@ const testimonials = [
       "I wholeheartedly recommend AMAS and RHOD LAW firm to anyone seeking reliable, results-oriented and trustworthy legal representation"
   }
 ];
-export default function Home() {
+
+export async function getStaticProps() {
+  const query = `*[_type == "post"] | order(publishedAt desc){
+    _id,
+    title,
+    slug,
+    publishedAt,
+    mainImage {
+      asset -> { url }
+    },
+    body,
+    author->{
+      name,
+      image
+    },
+    categories[]->{
+      title
+    }
+  }`;
+
+  const posts = await client.fetch(query);
+
+  return {
+    props: { posts },
+    revalidate: 60
+  };
+}
+export default function Home({ posts }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto testimonials every 5 seconds
@@ -77,10 +107,6 @@ export default function Home() {
 
     return () => clearInterval(timer);
   }, [testimonials.length]);
-
-  // const goToSlide = (index) => {
-  //   setCurrentIndex(index);
-  // };
 
   const goToPrevious = () => {
     setCurrentIndex(
@@ -323,6 +349,11 @@ export default function Home() {
             </a>
           </section>
         </main>
+        {/* Blog */}
+        {/* <section className="py-24 px-6">
+          <div className="grid grid-cols-2 gap-8 max-w-7xl mx-auto"></div>
+        </section> */}
+        <BlogList posts={posts} showTitle={true} />
       </div>
     </Layout>
   );
