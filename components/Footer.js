@@ -31,8 +31,11 @@ export default function Footer() {
           </address>
           <p className="mt-4 text-lg">
             Phone:{" "}
-            <a href="tel:+2348134642665" className="hover:underline">
-              +234 813 464 2665, <br /> +234 913 756 5593
+            <a href="tel:+2348055438457" className="hover:underline">
+              +234 805 543 8457, <br />
+            </a>
+            <a href="tel:+2347062410156" className="hover:underline">
+              +234 706 241 0156 <br />
             </a>
           </p>
           <p className="text-lg">
@@ -41,7 +44,7 @@ export default function Footer() {
               href="mailto:info@amasandrhodlaw.com"
               className="hover:underline"
             >
-              info@amasandrhodlaw.com, admin@amasandrhodlaw.com
+              info@amasandrhodlaw.com
             </a>
           </p>
         </div>
@@ -71,7 +74,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="hover:text-gray-300 focus:text-gray-300"
+                className="hover:text-gray-500 focus:text-gray-500"
               >
                 <i className="fab fa-linkedin-in"></i>
               </a>
@@ -80,7 +83,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
-                className="hover:text-gray-300 focus:text-gray-300"
+                className="hover:text-gray-500 focus:text-gray-500"
               >
                 <i className="fab fa-twitter"></i>
               </a>
@@ -89,16 +92,16 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="hover:text-gray-300 focus:text-gray-300"
+                className="hover:text-gray-500 focus:text-gray-500"
               >
                 <i className="fab fa-instagram"></i>
               </a>
               <a
-                href="#"
+                href="https://wa.me/2348055438457?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20legal%20services"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Whatsapp"
-                className="hover:text-gray-300 focus:text-gray-300"
+                className="hover:text-gray-500 focus:text-gray-500"
               >
                 <i className="fab fa-whatsapp"></i>
               </a>
