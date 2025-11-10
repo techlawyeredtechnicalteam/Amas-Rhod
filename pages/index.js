@@ -29,17 +29,17 @@ const focusAreas = [
     title: "Immigration Law",
     description:
       "Providing legal representation and advisory services on immigration matters, including visa applications, permanent residency and citizenship processing, and compliance with statutory and administrative immigration requirements."
+  },
+  {
+    title: "Family law",
+    description:
+      "Providing legal advisory and representation in family law matters, including marriage validation, dissolution of marriage, child custody and maintenance proceedings, domestic abuse and violence, domestic partnership agreements, inheritance rights, Wills and probate, and enforcement of family-related court orders, in accordance with applicable statutory and customary law frameworks."
+  },
+  {
+    title: "Property law",
+    description:
+      "Providing legal advisory on real estate transactions, including title investigation, land verification, property documentation, contract drafting, tenancy structuring, and dispute prevention, in accordance with relevant land and conveyancing laws."
   }
-  // {
-  //   title: "Family law",
-  //   description:
-  //     "Providing legal advisory and representation in family law matters, including marriage validation, dissolution of marriage, child custody and maintenance proceedings, domestic abuse and violence, domestic partnership agreements, inheritance rights, Wills and probate, and enforcement of family-related court orders, in accordance with applicable statutory and customary law frameworks."
-  // },
-  // {
-  //   title: "Property law",
-  //   description:
-  //     "Providing legal advisory on real estate transactions, including title investigation, land verification, property documentation, contract drafting, tenancy structuring, and dispute prevention, in accordance with relevant land and conveyancing laws."
-  // }
 ];
 
 const testimonials = [
