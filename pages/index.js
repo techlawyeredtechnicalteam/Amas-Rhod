@@ -1,101 +1,18 @@
 "use client";
-
-import Head from "next/head";
-import Link from "next/link";
-import { StarIcon } from "@heroicons/react/24/solid";
-import Layout from "../components/Layout";
 import Image from "next/image";
-
-import { useAnimation } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-// import Blog from "./blog";
-import { client } from "../lib/sanity";
 import BlogList from "./BlogList";
+import { useInView } from "framer-motion";
+import Layout from "../components/Layout";
+import { useAnimation } from "framer-motion";
+import { focusAreas } from "../src/data/focusArea";
+import { useEffect, useRef, useState } from "react";
+import { StarIcon } from "@heroicons/react/24/solid";
+import { testimonials } from "../src/data/testimonial";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { getStaticProps } from "../src/services/BlogStaticProps";
 
-const focusAreas = [
-  {
-    title: "Maritime law",
-    description:
-      "Providing legal advisory and representation across maritime operations, including contract drafting and review for shipping, haulage and logistics transactions, demurrage and freight disputes, vessel chartering agreements, cargo claims, regulatory compliance, and enforcement of maritime rights before competent tribunals, in line with the Admiralty Jurisdiction Act and other applicable laws."
-  },
-  {
-    title: "Entertainment law",
-    description:
-      "Providing comprehensive legal support to creati  ves and entertainment businesses in the negotiation, drafting, and enforcement of contracts, intellectual property protection, talent representation, and regulatory compliance across the media and entertainment industry."
-  },
-  {
-    title: "Immigration Law",
-    description:
-      "Providing legal representation and advisory services on immigration matters, including visa applications, permanent residency and citizenship processing, and compliance with statutory and administrative immigration requirements."
-  },
-  {
-    title: "Family law",
-    description:
-      "Providing legal advisory and representation in family law matters, including marriage validation, dissolution of marriage, child custody and maintenance proceedings, domestic abuse and violence, domestic partnership agreements, inheritance rights, Wills and probate, and enforcement of family-related court orders, in accordance with applicable statutory and customary law frameworks."
-  },
-  {
-    title: "Property law",
-    description:
-      "Providing legal advisory on real estate transactions, including title investigation, land verification, property documentation, contract drafting, tenancy structuring, and dispute prevention, in accordance with relevant land and conveyancing laws."
-  }
-];
+export { getStaticProps };
 
-const testimonials = [
-  {
-    name: "Collins Dike ",
-    quote:
-      "My encounter with the Firm was one of life saving! The lawyers treated my case with much importance and didn’t make me feel alone,  from start to finish. Services were timely and top-notch."
-  },
-  {
-    name: "Gaye Gillet",
-    quote:
-      "They are  approachable, professional and are completely dedicated to resolving your issues in a competent, timely way."
-  },
-  {
-    name: "Richard Uzoeghelu ",
-    quote:
-      "I requested contract review and contract drafting services and this was done in no time with accuracy. "
-  },
-  {
-    name: "Mr Joseph Akinsusi",
-    quote:
-      "From my experience with Amas and Rhod Law, what  truly sets them apart is their commitment to the success of my case which gave me absolute peace of mind"
-  },
-  {
-    name: "Philip Okwor",
-    quote:
-      "I wholeheartedly recommend AMAS and RHOD LAW firm to anyone seeking reliable, results-oriented and trustworthy legal representation"
-  }
-];
-
-export async function getStaticProps() {
-  const query = `*[_type == "post"] | order(publishedAt desc){
-    _id,
-    title,
-    slug,
-    publishedAt,
-    mainImage {
-      asset -> { url }
-    },
-    body,
-    author->{
-      name,
-      image
-    },
-    categories[]->{
-      title
-    }
-  }`;
-
-  const posts = await client.fetch(query);
-
-  return {
-    props: { posts },
-    revalidate: 60
-  };
-}
 export default function Home({ posts }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -350,9 +267,6 @@ export default function Home({ posts }) {
           </section>
         </main>
         {/* Blog */}
-        {/* <section className="py-24 px-6">
-          <div className="grid grid-cols-2 gap-8 max-w-7xl mx-auto"></div>
-        </section> */}
         <BlogList posts={posts} showTitle={true} />
       </div>
     </Layout>

@@ -31,11 +31,11 @@ export default function Footer() {
           </address>
           <p className="mt-4 text-lg">
             Phone:{" "}
-            <a href="tel:+2348055438457" className="hover:underline">
-              +234 805 543 8457, <br />
+            <a href="tel:+2348134642665" className="hover:underline">
+              +234 813 464 2665, <br />
             </a>
-            <a href="tel:+2347062410156" className="hover:underline">
-              +234 706 241 0156 <br />
+            <a href="tel:+2349137565593" className="hover:underline">
+              +234 913 756 5593 <br />
             </a>
           </p>
           <p className="text-lg">
@@ -63,7 +63,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Section: Socials and Accessibility */}
-      <div className="max-w-6xl mx-auto mt-12 border-t border-gray-500 pt-8 text-center md:text-left">
+      <div className="max-w-7xl mx-auto mt-12 border-t border-gray-500 pt-8 text-center md:text-left">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           {/* Social Links */}
           <div>
