@@ -97,7 +97,7 @@ export default function Footer() {
                 <i className="fab fa-instagram"></i>
               </a>
               <a
-                href="https://wa.me/2348055438457?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20legal%20services"
+                href="https://wa.me/2348134642665?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20legal%20services"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Whatsapp"
