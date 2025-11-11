@@ -1,42 +1,9 @@
-import Layout from "../components/Layout";
 import Head from "next/head";
-import { client } from "../lib/sanity";
-// import Link from "next/link";
-// import Image from "next/image";
-// import { FaUser, FaCalendarAlt, FaComments } from "react-icons/fa";
-// import dynamic from "next/dynamic";
 import BlogList from "./BlogList";
+import Layout from "../components/Layout";
+import { getStaticProps } from "../src/services/BlogStaticProps";
 
-// const BlogDate = dynamic(() => import("../components/BlogDate"), {
-//   ssr: false
-// });
-
-export async function getStaticProps() {
-  const query = `*[_type == "post"] | order(publishedAt desc){
-    _id,
-    title,
-    slug,
-    publishedAt,
-    mainImage {
-      asset -> { url }
-    },
-    body,
-    author->{
-      name,
-      image
-    },
-    categories[]->{
-      title
-    }
-  }`;
-
-  const posts = await client.fetch(query);
-
-  return {
-    props: { posts },
-    revalidate: 60
-  };
-}
+export { getStaticProps };
 
 export default function Blog({ posts }) {
   return (
@@ -44,13 +11,11 @@ export default function Blog({ posts }) {
       <Head>
         <title>Amas & Rhod Law | Blog</title>
       </Head>
-      {/* <div className="max-w-5xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8">Blog Posts</h1>
-      </div> */}
       <BlogList posts={posts} showTitle={true} />
     </Layout>
   );
 }
+
 // {posts.map((post) => (
 //   <div
 //     key={post._id}

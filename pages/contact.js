@@ -139,16 +139,16 @@ const Contact = () => {
                       Phone
                     </h3>
                     <a
-                      href="tel:+2348055438457"
+                      href="tel:+2348134642665"
                       className="hover:underline text-sm"
                     >
-                      +234 805 543 8457, <br />
+                      +234 813 464 2665, <br />
                     </a>
                     <a
-                      href="tel:+2347062410156"
+                      href="tel:+2349137565593"
                       className="hover:underline text-sm"
                     >
-                      +234 706 241 0156 <br />
+                      +234 913 756 5593 <br />
                     </a>
                   </div>
                 </div>
