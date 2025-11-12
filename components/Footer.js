@@ -1,12 +1,13 @@
 import Image from "next/image";
 import logo from "../public/logo.png";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-100 text-gray-800 py-16 px-6 md:px-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Logo and Firm Name */}
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start mb-4">
           <Image
             src={logo}
             alt="Amas & Rhod Law logo"
@@ -14,9 +15,52 @@ export default function Footer() {
             height={100}
             className="object-contain"
           />
-          <h3 className="mt-4 text-2xl font-bold font-garamond tracking-wider leading-tight text-center md:text-left">
+          <h4 className="mt-4 text-2xl font-bold font-garamond tracking-wider leading-tight text-center md:text-left">
             Amas & Rhod Law
-          </h3>
+          </h4>
+
+          {/* Social Links */}
+          <div className="space-y-4 mt-6">
+            <h4 className="text-xl font-garamond mb-4 md:mb-2">Follow Us</h4>
+            <div className="flex justify-center md:justify-start space-x-6 text-2xl">
+              <a
+                href="https://www.linkedin.com/company/amasandrhodlaw/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="hover:text-gray-500 focus:text-gray-500"
+              >
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://x.com/amasandrhodlaw?s=21"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="hover:text-gray-500 focus:text-gray-500"
+              >
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/amasandrhodlaw?igsh=MXM4ZDJsY3liZjVmaQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="hover:text-gray-500 focus:text-gray-500"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://wa.me/2348134642665?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20legal%20services"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Whatsapp"
+                className="hover:text-gray-500 focus:text-gray-500"
+              >
+                <i className="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Contact Information */}
@@ -60,62 +104,37 @@ export default function Footer() {
             </p>
           </div>
         </div>
+
+        {/* Policies and Terms */}
+        <div className="space-y-2 flex flex-col">
+          <h4 className="text-lg font-semibold mb-4">Legal</h4>
+          <ul className="space-y-2">
+            <li>
+              <Link
+                href="/policy"
+                className="text-gray-800 hover:text-gray-700"
+              >
+                Privacy & Policies
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms" className="text-gray-800 hover:text-gray-700">
+                Terms of Service
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      {/* Bottom Section: Socials and Accessibility */}
+      {/* Bottom Section: Socials */}
       <div className="max-w-7xl mx-auto mt-12 border-t border-gray-500 pt-8 text-center md:text-left">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-          {/* Social Links */}
-          <div>
-            <h4 className="text-xl font-garamond mb-4 md:mb-2">Follow Us</h4>
-            <div className="flex justify-center md:justify-start space-x-6 text-2xl">
-              <a
-                href="https://www.linkedin.com/company/amasandrhodlaw/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="hover:text-gray-500 focus:text-gray-500"
-              >
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="https://x.com/amasandrhodlaw?s=21"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-                className="hover:text-gray-500 focus:text-gray-500"
-              >
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/amasandrhodlaw?igsh=MXM4ZDJsY3liZjVmaQ=="
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="hover:text-gray-500 focus:text-gray-500"
-              >
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://wa.me/2348134642665?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20legal%20services"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Whatsapp"
-                className="hover:text-gray-500 focus:text-gray-500"
-              >
-                <i className="fab fa-whatsapp"></i>
-              </a>
-            </div>
-          </div>
-
-          {/* policy */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-center">
+          {/* copyright reserved */}
           <div className="mt-6 md:mt-0">
-            <a
-              href="/policy"
-              className="text-lg hover:underline focus:underline"
-            >
-              Legal Policies
-            </a>
+            <p className="text-gray-500 text-sm">
+              &copy; {new Date().getFullYear()} Amas & Rhod Law. All rights
+              reserved.
+            </p>
           </div>
         </div>
       </div>

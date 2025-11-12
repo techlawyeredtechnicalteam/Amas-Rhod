@@ -1,44 +1,41 @@
-import Head from "next/head";
 import Layout from "../../components/Layout";
 import { client } from "../../lib/sanity";
 import Link from "next/link";
 
-export default function PoliciesIndex({ policies }) {
+export default function TermsIndex({ terms }) {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto px-6 py-16">
-        {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Policies
+            Terms & Agreements
           </h1>
           <p className="text-lg text-gray-600">
-            Please review our policies to understand how we protect your rights
-            and privacy.
+            Terms and conditions governing our services and your use of our
+            website
           </p>
         </div>
 
-        {/* Policy Cards Grid */}
-        <div className="space-y-4">
-          {policies.map((policy) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {terms.map((term) => (
             <Link
-              key={policy._id}
-              href={`/policy/${policy.slug.current}`}
+              key={term._id}
+              href={`/terms/${term.slug.current}`}
               className="block"
             >
-              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:text-blue-950 transition-shadow duration-300 h-full">
+              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 h-full">
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                  {policy.title}
+                  {term.title}
                 </h2>
-                {policy.description && (
+                {term.description && (
                   <p className="text-gray-600 mb-4 leading-relaxed">
-                    {policy.description}
+                    {term.description}
                   </p>
                 )}
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">
                     Updated:{" "}
-                    {new Date(policy.lastUpdated).toLocaleDateString("en-US", {
+                    {new Date(term.lastUpdated).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "short",
                       day: "numeric"
@@ -53,14 +50,12 @@ export default function PoliciesIndex({ policies }) {
           ))}
         </div>
 
-        {/* Contact Section */}
-        {/* <section className="bg-gray-50 p-8 rounded-lg mt-4">
+        {/* <section className="bg-gray-50 p-8 rounded-lg">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Questions About Our Policies?
+            Questions About Our Terms?
           </h2>
           <p className="text-gray-700 mb-4">
-            If you have any questions about these policies or how we handle your
-            information, please don't hesitate to contact us.
+            If you have any questions, please contact us:
           </p>
           <div className="space-y-2 text-gray-700">
             <p>
@@ -84,7 +79,7 @@ export default function PoliciesIndex({ policies }) {
 }
 
 export async function getStaticProps() {
-  const query = `*[_type == "policy"] | order(order asc) {
+  const query = `*[_type == "policy" && category == "terms"] | order(order asc) {
     _id,
     title,
     slug,
@@ -92,10 +87,10 @@ export async function getStaticProps() {
     lastUpdated
   }`;
 
-  const policies = await client.fetch(query);
+  const terms = await client.fetch(query);
 
   return {
-    props: { policies },
+    props: { terms },
     revalidate: 3600
   };
 }
