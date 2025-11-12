@@ -58,20 +58,17 @@ const components = {
   }
 };
 
-// remove all policies (allPolicies)
-export default function PolicyPage({ policy }) {
+export default function PolicyDetailPage({ policy, relatedPolicies }) {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto px-6 py-16">
-        {/* Back Link */}
         <Link
-          href="/policy"
+          href="/terms"
           className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-8"
         >
-          ← Back to All Policies
+          ← Back to Terms
         </Link>
 
-        {/* Header */}
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {policy.title}
@@ -91,45 +88,36 @@ export default function PolicyPage({ policy }) {
           )}
         </div>
 
-        {/* Content */}
         <div className="prose prose-lg max-w-none">
           <PortableText value={policy.content} components={components} />
         </div>
 
-        {/* Other Policies */}
-        {/* {allPolicies.length > 1 && (
+        {relatedPolicies.length > 0 && (
           <div className="mt-16 pt-8 border-t border-gray-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Other Policies
+              Related Policies
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {allPolicies
-                .filter((p) => p._id !== policy._id)
-                .map((p) => (
-                  <Link
-                    key={p._id}
-                    href={`/policy/${p.slug.current}`}
-                    className="block bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors"
-                  >
-                    <h3 className="font-semibold text-gray-900 mb-1">
-                      {p.title}
-                    </h3>
-                    <span className="text-sm text-primary-600">
-                      Read Policy →
-                    </span>
-                  </Link>
-                ))}
+              {relatedPolicies.map((p) => (
+                <Link
+                  key={p._id}
+                  href={`/terms/${p.slug.current}`}
+                  className="block bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  <h3 className="font-semibold text-gray-900 mb-1">
+                    {p.title}
+                  </h3>
+                  <span className="text-sm text-primary-600">Read Terms →</span>
+                </Link>
+              ))}
             </div>
           </div>
-        )} */}
+        )}
 
-        {/* Contact Section */}
         {/* <section className="bg-gray-50 p-8 rounded-lg mt-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Questions About This Policy?
-          </h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Questions?</h2>
           <p className="text-gray-700 mb-4">
-            If you have any questions or concerns, please contact us:
+            Contact us if you have questions about this terms:
           </p>
           <div className="space-y-2 text-gray-700">
             <p>
@@ -137,6 +125,13 @@ export default function PolicyPage({ policy }) {
             </p>
             <p>
               <strong>Phone:</strong> +234 813 464 2665
+            </p>
+            <p>
+              <strong>Address:</strong> Emerge Hub No 4 Ayanboye street,
+              <br />
+              faramobi Ajike street Anthony village,
+              <br />
+              Lagos, Nigeria.
             </p>
           </div>
         </section> */}
@@ -146,7 +141,7 @@ export default function PolicyPage({ policy }) {
 }
 
 export async function getStaticPaths() {
-  const query = `*[_type == "policy"]{ slug }`;
+  const query = `*[_type == "policy" && category == "terms"]{ slug }`;
   const policies = await client.fetch(query);
 
   const paths = policies.map((policy) => ({
@@ -157,7 +152,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const policyQuery = `*[_type == "policy" && slug.current == $slug][0]{
+  const policyQuery = `*[_type == "policy" && category == "terms" && slug.current == $slug][0]{
     _id,
     title,
     slug,
@@ -166,22 +161,23 @@ export async function getStaticProps({ params }) {
     content
   }`;
 
-  // const allPoliciesQuery = `*[_type == "policy"] | order(order asc) {
-  //   _id,
-  //   title,
-  //   slug
-  // }`;
+  const relatedQuery = `*[_type == "policy" && category == "terms" && slug.current != $slug] | order(order asc) {
+    _id,
+    title,
+    slug
+  }`;
 
   const policy = await client.fetch(policyQuery, { slug: params.slug });
-  // const allPolicies = await client.fetch(allPoliciesQuery);
+  const relatedPolicies = await client.fetch(relatedQuery, {
+    slug: params.slug
+  });
 
   if (!policy) {
     return { notFound: true };
   }
 
-  // remove all policies
   return {
-    props: { policy },
+    props: { policy, relatedPolicies },
     revalidate: 3600
   };
 }
