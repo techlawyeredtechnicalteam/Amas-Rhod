@@ -13,12 +13,13 @@ export default function BlogList({ posts = [], showTitle = false }) {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="max-w-7xl mx-auto px-4 py-8">
       {showTitle && <h1 className="text-3xl font-bold mb-8">Blog Posts</h1>}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {posts.map((post) => (
           <div
             key={post._id}
+            // href={`/blog/${post.slug.current}`}
             className="flex flex-col md:flex-row gap-4 bg-white shadow-md rounded-md p-4"
           >
             {/* Image */}
