@@ -15,7 +15,7 @@ export default function BlogList({ posts = [], showTitle = false }) {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       {showTitle && <h1 className="text-3xl font-bold mb-8">Blog Posts</h1>}
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {posts.map((post) => (
           <div
             key={post._id}
@@ -46,13 +46,13 @@ export default function BlogList({ posts = [], showTitle = false }) {
                 {/* Meta Info */}
                 <div className="flex items-center text-sm text-gray-600 mt-2 space-x-4">
                   {post.author?.name && (
-                    <span className="flex items-center">
+                    <span className="flex items-center space-x-2">
                       <FaUser />
                       <span>{post.author.name}</span>
                     </span>
                   )}
                   <BlogDate date={post.publishedAt} />
-                  <span className="flex items-center">
+                  <span className="flex items-center space-x-2">
                     <FaComments />
                     <span>0 Comments</span>
                   </span>
