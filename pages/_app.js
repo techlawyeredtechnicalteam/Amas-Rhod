@@ -6,6 +6,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+        />
         <title>
           Amas & Rhod Law | Law in action. Protection in motion; Our Lawyers are
           working!

@@ -27,7 +27,7 @@ export default function Home({ posts }) {
 
   const goToPrevious = () => {
     setCurrentIndex(
-      (prev = (prev - 1 + testimonials.length) % testimonials.length)
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
     );
   };
 
@@ -47,7 +47,7 @@ export default function Home({ posts }) {
 
   return (
     <Layout>
-      <div className="font-sans text-gray-800">
+      <div className="font-sans text-gray-800 w-full">
         <main className="">
           {/* Hero Section */}
           <section className="relative h-screen w-full">
@@ -77,7 +77,7 @@ export default function Home({ posts }) {
           {/* About Section */}
           <section id="about" className="py-24 bg-gray-50 px-6">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="">
+              <div className="flex items-start">
                 <Image
                   src="/logo.png"
                   alt="Amas & Rhod Law Logo"
@@ -182,7 +182,7 @@ export default function Home({ posts }) {
           </section>
 
           {/* Testimonials */}
-          <section className="bg-blue-950 py-24 px-6 md:px-16 text-center">
+          <section className="bg-blue-950 py-24 px-6 md:px-16 text-center overflow-hidden">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl font-garamond md:text-5xl font-bold mb-6 text-white">
                 Client Testimonials
@@ -230,14 +230,14 @@ export default function Home({ posts }) {
                 {/* Navigation Arrows */}
                 <button
                   onClick={goToPrevious}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all z-10"
                   aria-label="Previous testimonial"
                 >
                   <ChevronLeft className="w-6 h-6 text-black" />
                 </button>
                 <button
                   onClick={goToNext}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all z-10"
                   aria-label="Next testimonial"
                 >
                   <ChevronRight className="w-6 h-6 text-black" />
