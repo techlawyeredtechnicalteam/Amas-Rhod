@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 
 const attorneys = [
   {
-    name: "Temilorun F. Komolafe ESQ",
+    name: "Temilorun F. Komolafe ESQ, LL.M, ACIARB, MIMA (UK)",
     title: "Principal Counsel",
     // bio: 'Sophia has over 20 years of experience in corporate law, specializing in mergers and acquisitions.',
     image: "/owner.png"
