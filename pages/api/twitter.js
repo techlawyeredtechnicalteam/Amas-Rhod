@@ -30,9 +30,12 @@ export default async function handler(req, res) {
 
     if (!userResponse.ok) {
       const errorText = await userResponse.text();
-      console.error("❌ Twitter API Error (user) - Status:", userResponse.status);
+      console.error(
+        "❌ Twitter API Error (user) - Status:",
+        userResponse.status
+      );
       console.error("❌ Response body:", errorText);
-      
+
       let errorData;
       try {
         errorData = JSON.parse(errorText);
@@ -51,9 +54,9 @@ export default async function handler(req, res) {
 
     if (!userData.data || !userData.data.id) {
       console.error("❌ No user ID found in response");
-      return res.status(404).json({ 
+      return res.status(404).json({
         error: "User not found",
-        userData: userData 
+        userData: userData
       });
     }
 
@@ -74,9 +77,12 @@ export default async function handler(req, res) {
 
     if (!tweetsResponse.ok) {
       const errorText = await tweetsResponse.text();
-      console.error("❌ Twitter API Error (tweets) - Status:", tweetsResponse.status);
+      console.error(
+        "❌ Twitter API Error (tweets) - Status:",
+        tweetsResponse.status
+      );
       console.error("❌ Response body:", errorText);
-      
+
       let errorData;
       try {
         errorData = JSON.parse(errorText);
@@ -91,7 +97,10 @@ export default async function handler(req, res) {
     }
 
     const tweetsData = await tweetsResponse.json();
-    console.log("✅ Tweets data received:", JSON.stringify(tweetsData, null, 2));
+    console.log(
+      "✅ Tweets data received:",
+      JSON.stringify(tweetsData, null, 2)
+    );
 
     if (!tweetsData.data || tweetsData.data.length === 0) {
       console.log("⚠️ No tweets found for user");
@@ -116,14 +125,13 @@ export default async function handler(req, res) {
 
     console.log("✅ Returning", formattedTweets.length, "tweets");
     res.status(200).json({ tweets: formattedTweets });
-    
   } catch (error) {
     console.error("❌ Unexpected error:", error);
     console.error("Error stack:", error.stack);
-    res.status(500).json({ 
+    res.status(500).json({
       error: "Failed to fetch tweets",
       message: error.message,
-      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+      stack: process.env.NODE_ENV === "development" ? error.stack : undefined
     });
   }
 }
