@@ -10,6 +10,7 @@ import { StarIcon } from "@heroicons/react/24/solid";
 import { testimonials } from "../src/data/testimonial";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { getStaticProps } from "../src/services/BlogStaticProps";
+import TwitterFeed from "../components/TwitterFeed";
 
 export { getStaticProps };
 
@@ -266,6 +267,10 @@ export default function Home({ posts }) {
             </a>
           </section>
         </main>
+
+        {/* Twitter Feed */}
+        <TwitterFeed username="aluko_oyebode" />
+
         {/* Blog */}
         <BlogList posts={posts} showTitle={true} />
       </div>
