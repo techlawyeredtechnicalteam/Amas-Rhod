@@ -4,7 +4,10 @@
 
 
 @layer base {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
@@ -33,19 +36,41 @@
 
 /* This style will apply a line under the text */
 .group::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: #230562; /* Tailwind indigo-600 or any color you prefer */
-    transition: width 0.3s ease-in-out;
-    font-weight: 400;
-  }
-  
-  .group:hover::after {
-    width: 100%;
-  }
-  
-  
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #230562;
+  /* Tailwind indigo-600 or any color you prefer */
+  transition: width 0.3s ease-in-out;
+  font-weight: 400;
+}
+
+.group:hover::after {
+  width: 100%;
+}
+
+:global(.twitter-timeline) {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  overflow: hidden !important;
+  pointer-events: auto !important;
+}
+
+:global(.twitter-timeline::-webkit-scrollbar) {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+:global(#twitter-widget-0) {
+  max-height: 850px !important;
+  overflow: hidden !important;
+}
+
+:global(.twitter-timeline iframe) {
+  max-height: 850px !important;
+  overflow: hidden !important;
+}
