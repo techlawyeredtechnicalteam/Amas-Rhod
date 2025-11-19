@@ -79,7 +79,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function TwitterFeed({ username = "aluko_oyebode" }) {
+export default function TwitterFeed({ username = "amasandrhodlaw" }) {
   const [tweets, setTweets] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

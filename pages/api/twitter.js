@@ -63,7 +63,7 @@ export default async function handler(req, res) {
     const userId = userData.data.id;
     console.log("✅ User ID:", userId);
 
-    // Then get user's tweets (min 5, we'll limit to 3 after fetching)
+    // get user's tweets (min 5, we'll limit to 3 after fetching)
     const tweetsUrl = `https://api.twitter.com/2/users/${userId}/tweets?max_results=5&tweet.fields=created_at,public_metrics,entities&expansions=author_id&user.fields=name,username,profile_image_url`;
     console.log("📡 Fetching tweets from:", tweetsUrl);
 
