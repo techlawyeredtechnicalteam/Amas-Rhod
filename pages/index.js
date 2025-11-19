@@ -269,7 +269,7 @@ export default function Home({ posts }) {
         </main>
 
         {/* Twitter Feed */}
-        <TwitterFeed username="aluko_oyebode" />
+        <TwitterFeed username="amasandrhodlaw" />
 
         {/* Blog */}
         <BlogList posts={posts} showTitle={true} />
