@@ -11,6 +11,7 @@ import { testimonials } from "../src/data/testimonial";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { getStaticProps } from "../src/services/BlogStaticProps";
 import TwitterFeed from "../components/TwitterFeed";
+import LinkedInFeed from "../components/LinkedInFeed";
 
 export { getStaticProps };
 
@@ -266,13 +267,11 @@ export default function Home({ posts }) {
               Contact Us
             </a>
           </section>
+          {/* Blog */}
+          <BlogList posts={posts} showTitle={true} />
+          {/* LinkedIn Feed */}
+          <LinkedInFeed companyId="amasandrhodlaw" />
         </main>
-
-        {/* Twitter Feed */}
-        <TwitterFeed username="amasandrhodlaw" />
-
-        {/* Blog */}
-        <BlogList posts={posts} showTitle={true} />
       </div>
     </Layout>
   );

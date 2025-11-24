@@ -52,7 +52,7 @@
   width: 100%;
 }
 
-:global(.twitter-timeline) {
+/* :global(.twitter-timeline) {
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
   overflow: hidden !important;
@@ -73,4 +73,4 @@
 :global(.twitter-timeline iframe) {
   max-height: 850px !important;
   overflow: hidden !important;
-}
+} */
