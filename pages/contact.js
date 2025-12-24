@@ -83,7 +83,7 @@ const Contact = () => {
     <Layout>
       <div className="bg-gray-50 py-20 px-4 min-h-screen">
         <Head>
-          <title>Amas & Rhod | Contact Us</title>
+          <title>Habeeb Jimoh & Associates| Contact Us</title>
         </Head>
         <div className="max-w-7xl mx-auto space-y-16">
           {/* Header */}
@@ -120,14 +120,14 @@ const Contact = () => {
                   <MapPin className="text-blue-950 mt-1 mr-4" />
                   <div>
                     <h3 className="font-semibold text-blue-950 text-lg">
-                      Our Office
+                      Contact US
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Emerge Hub No 4 Ayanboye street,
+                      8B Valley View Close,
                       <br />
-                      faramobi Ajike street Anthony village,
+                      Valley Estate
                       <br />
-                      Lagos, Nigeria.
+                      Ikeja, Lagos Nigeria
                     </p>
                   </div>
                 </div>
@@ -139,16 +139,16 @@ const Contact = () => {
                       Phone
                     </h3>
                     <a
-                      href="tel:+2348134642665"
+                      href="tel:+2347038771202"
                       className="hover:underline text-sm"
                     >
-                      +234 813 464 2665, <br />
+                      +234 703 877 1202, <br />
                     </a>
                     <a
-                      href="tel:+2349137565593"
+                      href="tel:+2348058334106"
                       className="hover:underline text-sm"
                     >
-                      +234 913 756 5593 <br />
+                      +234 805 833 4106 <br />
                     </a>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ const Contact = () => {
                       href="mailto:info@amasandrhodlaw.com"
                       className="text-gray-600 text-sm"
                     >
-                      info@amasandrhodlaw.com
+                      Habeeb.a.jimoh@niegerianbar.ng
                     </a>
                   </div>
                 </div>

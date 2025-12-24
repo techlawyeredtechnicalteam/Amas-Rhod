@@ -9,7 +9,7 @@ export default function Blog({ posts }) {
   return (
     <Layout>
       <Head>
-        <title>Amas & Rhod Law | Blog</title>
+        <title>Habeeb Jimoh & Associates| Blog</title>
       </Head>
       <BlogList posts={posts} showTitle={true} />
     </Layout>
