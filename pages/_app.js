@@ -11,7 +11,8 @@ function MyApp({ Component, pageProps }) {
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         />
         <title>
-          Habeeb Jimoh & Associates | Innovative approach to legal services.
+          Amas & Rhod Law | Law in action. Protection in motion; Our Lawyers are
+          working!
         </title>
         <meta
           name="description"

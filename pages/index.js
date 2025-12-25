@@ -55,17 +55,17 @@ export default function Home({ posts }) {
           <section className="relative h-screen w-full">
             <Image
               src="/hero.png"
-              alt="Habeeb Jimoh & Associates"
+              alt="Amas & Rhod Law hero"
               fill
               priority
               className="object-cover object-center z-0"
             />
             <div className="absolute inset-0 bg-black bg-opacity-60 z-10 flex flex-col items-center justify-center text-center text-white px-4">
               <h1 className="text-5xl md:text-6xl font-garamond font-bold mb-6 leading-tight">
-                Habeeb Jimoh & Associates
+                Amas & Rhod Law
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Innovative approach to legal services.
+                Law in action. Protection in motion; Our Lawyers are working!
               </p>
               {/* <a
                 href="#contact"
@@ -82,7 +82,7 @@ export default function Home({ posts }) {
               <div className="flex items-start">
                 <Image
                   src="/logo.png"
-                  alt="Habeeb Jimoh & Associates"
+                  alt="Amas & Rhod Law Logo"
                   width={200}
                   height={200}
                 />
@@ -92,12 +92,10 @@ export default function Home({ posts }) {
                   About Us
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Habeeb Jimoh & Associates (HJ & A) is a leading hybrid law
-                  firm based in the heart of Lagos, Nigeria, renowned for its
-                  innovative approach to legal services. We leverage
-                  cutting-edge technology to provide seamless, efficient, and
-                  effective legal solutions to our clients, regardless of their
-                  geographical location.
+                  At Amas & Rhod Law, we are known for our professionalism,
+                  proactiveness, in time responsiveness, and aﬀordability, we
+                  remain committed to protecting our clients&apos; interests
+                  with clarity and eﬃciency.
                 </p>
               </div>
             </div>
@@ -152,14 +150,11 @@ export default function Home({ posts }) {
                       Our Mission
                     </h3>
                     <p className="text-sm text-gray-700 text-center mt-2">
-                      Our mission is to revolutionize legal services by
-                      providing top-tier, accessible, and efficient legal
-                      solutions through a hybrid platform. We strive to uphold
-                      the highest standards of professionalism and integrity,
-                      building lasting relationships with our clients through
-                      personalized attention and exceptional legal expertise.
-                      Our goal is to consistently meet and exceed our clients'
-                      evolving needs, ensuring their success and peace of mind.
+                      To empower clients with practical and top-tier legal
+                      solutions,delivered with conﬁdence, insight, and strategic
+                      clarity. We are committed to protecting our clients&apos;
+                      interests, preventing disputes, and providing decisive
+                      representation across every legal challenge.
                     </p>
                   </div>
                 </div>
@@ -178,9 +173,9 @@ export default function Home({ posts }) {
                       Our Values
                     </h3>
                     <p className="text-sm text-gray-700 text-center mt-2">
-                      We believe in the power of teamwork and collaboration,
-                      both within our firm and with our clients, to achieve
-                      shared goals.
+                      Guided by transparency, accountability, and a client-first
+                      ethos, we are committed to securing the best outcomes for
+                      those we serve.
                     </p>
                   </div>
                 </div>
@@ -274,8 +269,8 @@ export default function Home({ posts }) {
           </section>
           {/* Blog */}
           <BlogList posts={posts} showTitle={true} />
-          {/* LinkedIn Feed
-          <LinkedInFeed companyId="amasandrhodlaw" /> */}
+          {/* LinkedIn Feed */}
+          <LinkedInFeed companyId="amasandrhodlaw" />
         </main>
       </div>
     </Layout>
