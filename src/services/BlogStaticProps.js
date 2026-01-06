@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // "use client";
+=======
+"use client";
+>>>>>>> 90802addfc00d9bdb4eaacdb0a08d4e25f4c2262
 
 import { client } from "../../lib/sanity";
 

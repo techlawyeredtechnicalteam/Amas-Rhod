@@ -1,6 +1,10 @@
 "use client";
 import Image from "next/image";
+<<<<<<< HEAD
 // import BlogList from "./BlogList";
+=======
+import BlogList from "./BlogList";
+>>>>>>> 90802addfc00d9bdb4eaacdb0a08d4e25f4c2262
 import { useInView } from "framer-motion";
 import Layout from "../components/Layout";
 import { useAnimation } from "framer-motion";
@@ -10,9 +14,14 @@ import { StarIcon } from "@heroicons/react/24/solid";
 import { testimonials } from "../src/data/testimonial";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { getStaticProps } from "../src/services/BlogStaticProps";
+<<<<<<< HEAD
 // import TwitterFeed from "../components/TwitterFeed";
 import LinkedInFeed from "../components/LinkedInFeed";
 import BlogPostGrid from "./BlogPostSlider";
+=======
+import TwitterFeed from "../components/TwitterFeed";
+import LinkedInFeed from "../components/LinkedInFeed";
+>>>>>>> 90802addfc00d9bdb4eaacdb0a08d4e25f4c2262
 
 export { getStaticProps };
 
@@ -269,7 +278,11 @@ export default function Home({ posts }) {
             </a>
           </section>
           {/* Blog */}
+<<<<<<< HEAD
           <BlogPostGrid posts={posts} showAll={false} maxPosts={3} />
+=======
+          <BlogList posts={posts} showTitle={true} />
+>>>>>>> 90802addfc00d9bdb4eaacdb0a08d4e25f4c2262
           {/* LinkedIn Feed */}
           <LinkedInFeed companyId="amasandrhodlaw" />
         </main>
