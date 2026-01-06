@@ -1,12 +1,7 @@
 import Head from "next/head";
-import BlogList from "./BlogList";
 import Layout from "../components/Layout";
 import { getStaticProps } from "../src/services/BlogStaticProps";
-<<<<<<< HEAD
-import BlogPostSlider from "./BlogPostSlider";
 import BlogPostGrid from "./BlogPostSlider";
-=======
->>>>>>> 90802addfc00d9bdb4eaacdb0a08d4e25f4c2262
 
 export { getStaticProps };
 
@@ -16,11 +11,7 @@ export default function Blog({ posts }) {
       <Head>
         <title>Amas & Rhod Law | Blog</title>
       </Head>
-<<<<<<< HEAD
       <BlogPostGrid posts={posts} showAll={true} />
-=======
-      <BlogList posts={posts} showTitle={true} />
->>>>>>> 90802addfc00d9bdb4eaacdb0a08d4e25f4c2262
     </Layout>
   );
 }
