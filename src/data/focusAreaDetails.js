@@ -1,6 +1,6 @@
 export const focusAreaDetails = {
   "maritime-law": {
-    mainImage: "/maritime-law.jpg",
+    mainImage: "/maritime-law.png",
     title: "Maritime Law",
     intro:
       "Maritime law covers a wide range of activities, including the carriage of goods and passengers by sea, marine insurance, ship registration, and maritime safety. It ensures the smooth operation of maritime activities, protects the rights and interests of parties involved, and regulates conduct on the high seas and inland waterways.",
@@ -117,7 +117,7 @@ export const focusAreaDetails = {
   },
 
   "entertainment-law": {
-    mainImage: "/entertainment-law.jpg",
+    mainImage: "/entertainment-law.png",
     title: "Entertainment Law",
     intro:
       "Entertainment Law governs the creation, production, distribution, and commercial exploitation of creative works in the entertainment industry, ensuring creativity and commerce coexist under clear legal frameworks.",
@@ -220,7 +220,7 @@ export const focusAreaDetails = {
     ]
   },
   "property-law": {
-    mainImage: "/property-law.jpg",
+    mainImage: "/property-law.png",
     title: "Property Law",
     intro:
       "Property Law governs the ownership, use, transfer, and management of land and other immovable property. It ensures all transactions relating to real estate are carried out lawfully, rights are properly transferred, and interests are adequately protected.",
@@ -584,7 +584,7 @@ export const focusAreaDetails = {
   },
 
   litigation: {
-    mainImage: "/litigation.jpg",
+    mainImage: "/litigation.png",
     title: "Litigation",
     intro:
       "Litigation refers to the process of resolving disputes through the court system. It is a formal legal mechanism where parties bring their cases before a judge or tribunal for determination. At our firm, litigation is always the last resort.",

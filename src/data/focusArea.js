@@ -4,14 +4,14 @@ export const focusAreas = [
   {
     title: "Maritime law",
     slug: "maritime-law",
-    image: "/maritime-law.jpg",
+    image: "/maritime-law.png",
     description:
       "Maritime law covers a wide range of activities, including the carriage of goods and passengers by sea, marine insurance, ship registration, and maritime safety. It ensures the smooth operation of maritime activities, protects the rights and interests of parties involved, and regulates conduct on the high seas and inland waterways"
   },
   {
     title: "Entertainment law",
     slug: "entertainment-law",
-    image: "/entertainment-law.jpg",
+    image: "/entertainment-law.png",
     description:
       "Entertainment Law refers to the body of legal principles and regulations that govern the creation, production, distribution, and commercial exploitation of creative works in the entertainment industry..."
   },
@@ -32,7 +32,7 @@ export const focusAreas = [
   {
     title: "Property law",
     slug: "property-law",
-    image: "/property-law.jpg",
+    image: "/property-law.png",
     description:
       "Property Law is the branch of law that governs the ownership, use, transfer, and management of land and other immovable property. It defines the legal relationships between individuals and entities regarding real estate..."
   },
@@ -46,7 +46,7 @@ export const focusAreas = [
   {
     title: "Litigation ",
     slug: "litigation",
-    image: "/litigation.jpg",
+    image: "/litigation.png",
     description:
       "Litigation refers to the process of resolving disputes through the court system. It is a formal legal mechanism where parties bring their cases before a judge or tribunal for determination..."
   }
