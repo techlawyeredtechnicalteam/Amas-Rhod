@@ -34,6 +34,7 @@ export default function Header() {
               >
                 {item}
                 {/* <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span> */}
+                
               </Link>
             )
           )}

@@ -107,27 +107,46 @@ export default function Home({ posts }) {
             id="practice-areas"
             className="bg-blue-950 text-white py-24 px-6 md:px-20"
           >
+            {" "}
             <div className="max-w-7xl mx-auto text-center">
+              {" "}
               <h2 className="text-4xl font-garamond md:text-5xl font-bold mb-6">
-                Our <span className="text-black italic">Areas of Focus</span>
-              </h2>
+                Our{" "}
+                <span className="text-black italic">Areas of Focus</span>{" "}
+              </h2>{" "}
               <p className="text-gray-400 text-lg mb-16">
-                Expertise across key fields to meet your unique legal needs.
-              </p>
+                Expertise across key fields to meet your unique legal
+                needs.{" "}
+              </p>{" "}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                {" "}
                 {focusAreas.map((area, idx) => (
-                  <div
+                  <a
                     key={idx}
-                    className="bg-white rounded-lg p-8 hover:bg-gray-50 transition duration-300 shadow-lg"
+                    href={`/focus-areas/${area.slug}`}
+                    className="block rounded-lg overflow-hidden shadow-xl group transition duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-2xl"
                   >
-                    <h4 className="text-xl font-bold mb-4 text-black">
-                      {area.title}
-                    </h4>
-                    <p className="text-black">{area.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+                    {" "}
+                    <div className="relative h-56 w-full">
+                      {" "}
+                      <Image
+                        src={area.image}
+                        alt={area.title}
+                        fill
+                        className="object-cover object-center transition duration-500 ease-in-out group-hover:opacity-80"
+                      />
+                      {/* Overlay for the title */}{" "}
+                      <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end justify-start p-4">
+                        {" "}
+                        <h4 className="text-2xl font-bold text-white leading-snug">
+                          {area.title}{" "}
+                        </h4>
+                      </div>{" "}
+                    </div>{" "}
+                  </a>
+                ))}{" "}
+              </div>{" "}
+            </div>{" "}
           </section>
 
           {/* Why Choose Us */}
