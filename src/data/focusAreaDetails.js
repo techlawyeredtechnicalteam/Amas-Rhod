@@ -531,139 +531,139 @@ export const focusAreaDetails = {
         ]
       }
     ]
-  },
+  }
 
   // --- RELATED FOCUS AREAS: ADR and Litigation ---
 
-  "alternative-dispute-resolution": {
-    mainImage: "/adr.png",
-    title: "Alternative to Dispute Resolutions (ADR)",
-    intro:
-      "ADR refers to methods of settling disputes outside the traditional court system, including mediation, negotiation, arbitration, and conciliation. It focuses on communication, compromise, and efficiency to preserve relationships, save time, and reduce costs.",
+  // "alternative-dispute-resolution": {
+  //   mainImage: "/adr.png",
+  //   title: "Alternative to Dispute Resolutions (ADR)",
+  //   intro:
+  //     "ADR refers to methods of settling disputes outside the traditional court system, including mediation, negotiation, arbitration, and conciliation. It focuses on communication, compromise, and efficiency to preserve relationships, save time, and reduce costs.",
 
-    sections: [
-      {
-        heading: "What is ADR?",
-        content: `
-          Alternative Dispute Resolution (ADR) refers to methods of settling disputes outside the traditional court system. It includes processes such as mediation, negotiation, arbitration, and conciliation, where parties work collaboratively, often with the help of a neutral third party, to reach a fair, binding, or non-binding agreement.
-          
-          ADR focuses on communication, compromise, and efficiency, ensuring that conflicts are resolved in a manner that preserves relationships, saves time, and reduces the cost and stress associated with litigation.
-        `
-      },
-      {
-        heading: "How do we apply this to our clients?",
-        content: `At our firm, ADR serves as a strategic tool to protect our clients’ interests while promoting peaceable and cost-effective solutions. We integrate ADR in several ways:`,
-        subSections: [
-          {
-            title: "In Property Law",
-            details:
-              "Facilitating negotiations between landlords and tenants, or resolving boundary, lease, or ownership disputes without lengthy court battles."
-          },
-          {
-            title: "In Family Law",
-            details:
-              "Using mediation and conciliation to handle sensitive matters such as divorce settlements, custody, and maintenance in a confidential and humane way."
-          },
-          {
-            title: "In Entertainment Law",
-            details:
-              "Assisting artists, managers, and production companies to resolve contractual disagreements privately and maintain professional relationships."
-          },
-          {
-            title: "In Corporate and Immigration Matters",
-            details:
-              "Managing compliance or contractual disputes through structured dialogue and arbitration."
-          }
-        ]
-      },
-      {
-        heading: "Our ADR Philosophy",
-        content: `Our approach prioritizes resolution over confrontation, ensuring that outcomes are fair, legally sound, and preserve the long-term interests of our clients.`
-      }
-    ]
-  },
+  //   sections: [
+  //     {
+  //       heading: "What is ADR?",
+  //       content: `
+  //         Alternative Dispute Resolution (ADR) refers to methods of settling disputes outside the traditional court system. It includes processes such as mediation, negotiation, arbitration, and conciliation, where parties work collaboratively, often with the help of a neutral third party, to reach a fair, binding, or non-binding agreement.
 
-  litigation: {
-    mainImage: "/litigation.png",
-    title: "Litigation",
-    intro:
-      "Litigation refers to the process of resolving disputes through the court system. It is a formal legal mechanism where parties bring their cases before a judge or tribunal for determination. At our firm, litigation is always the last resort.",
+  //         ADR focuses on communication, compromise, and efficiency, ensuring that conflicts are resolved in a manner that preserves relationships, saves time, and reduces the cost and stress associated with litigation.
+  //       `
+  //     },
+  //     {
+  //       heading: "How do we apply this to our clients?",
+  //       content: `At our firm, ADR serves as a strategic tool to protect our clients’ interests while promoting peaceable and cost-effective solutions. We integrate ADR in several ways:`,
+  //       subSections: [
+  //         {
+  //           title: "In Property Law",
+  //           details:
+  //             "Facilitating negotiations between landlords and tenants, or resolving boundary, lease, or ownership disputes without lengthy court battles."
+  //         },
+  //         {
+  //           title: "In Family Law",
+  //           details:
+  //             "Using mediation and conciliation to handle sensitive matters such as divorce settlements, custody, and maintenance in a confidential and humane way."
+  //         },
+  //         {
+  //           title: "In Entertainment Law",
+  //           details:
+  //             "Assisting artists, managers, and production companies to resolve contractual disagreements privately and maintain professional relationships."
+  //         },
+  //         {
+  //           title: "In Corporate and Immigration Matters",
+  //           details:
+  //             "Managing compliance or contractual disputes through structured dialogue and arbitration."
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       heading: "Our ADR Philosophy",
+  //       content: `Our approach prioritizes resolution over confrontation, ensuring that outcomes are fair, legally sound, and preserve the long-term interests of our clients.`
+  //     }
+  //   ]
+  // },
 
-    sections: [
-      {
-        heading: "What is Litigation?",
-        content: `
-          Litigation refers to the process of resolving disputes through the court system. It is a formal legal mechanism where parties bring their cases before a judge or tribunal for determination. Litigation may be civil (involving private disputes) or criminal (involving offences prosecuted by the state).
-          
-          At its core, litigation seeks justice and legal redress, but it can be time-consuming, emotionally draining, and financially demanding.
-        `
-      },
-      {
-        heading: "Our Policy on Litigation",
-        content: `
-          At our firm, litigation is always the last resort. We believe that not every conflict requires a courtroom. Our first priority is to help clients resolve disputes amicably through Alternative Dispute Resolution (ADR).
-          
-          We advise clients to exhaust all non-contentious options first. Only when resolution remains impossible do we turn to the courts. Where litigation becomes absolutely necessary, our firm maintains a network of trusted **external litigation partners** who handle the proceedings on our behalf, under our guidance and supervision.
-        `
-      },
-      {
-        heading: "Civil Actions",
-        content: `Civil actions are legal proceedings between private individuals or organizations seeking to enforce a right, or to obtain compensation for a wrong (e.g., breach of contract, land ownership, debt recovery). The goal is to restore rights or recover losses, not to punish.`,
-        subSections: [
-          {
-            title: "Pre-Action Stage",
-            details:
-              "Exploring settlement or ADR options; issuing a pre-action protocol or letter of demand."
-          },
-          {
-            title: "Filing of Originating Processes",
-            details:
-              "Claimant files a Writ of Summons, Statement of Claim, and supporting documents at the appropriate court."
-          },
-          {
-            title: "Pleadings Stage",
-            details:
-              "Parties exchange written pleadings (Statement of Claim, Defence, Reply), setting out their respective cases."
-          },
-          {
-            title: "Trial and Judgment",
-            details:
-              "Parties present evidence and arguments, followed by the court delivering its binding decision."
-          }
-        ]
-      },
-      {
-        heading: "Criminal Actions",
-        content: `Criminal actions are legal proceedings initiated by the State against an individual or organization accused of committing an offence (e.g., theft, fraud, assault). The key objective is justice, deterrence, and the protection of the public.`,
-        subSections: [
-          {
-            title: "Chronology",
-            details:
-              "Investigation → Arrest → Prosecution/Charging → Arraignment and Plea → Trial → Judgment → Sentencing."
-          },
-          {
-            title: "Our Role in Criminal Matters",
-            details:
-              "We focus on **advisory, preventive, and compliance-related services**. We guide clients during investigations, assist with compliance policies (anti-corruption, data protection), and engage external criminal specialists if a matter proceeds to prosecution."
-          }
-        ]
-      },
-      {
-        heading: "Advantages vs. Disadvantages",
-        content: ``,
-        subSections: [
-          {
-            title: "Advantages",
-            details:
-              "Provides a binding and enforceable judgment, allows for legal precedent, and offers structured procedural safeguards and appeal options."
-          },
-          {
-            title: "Disadvantages",
-            details:
-              "Often expensive and time-consuming, can strain relationships, lacks flexibility (outcome strictly determined by the court), and involves public proceedings."
-          }
-        ]
-      }
-    ]
-  }
+  // litigation: {
+  //   mainImage: "/litigation.png",
+  //   title: "Litigation",
+  //   intro:
+  //     "Litigation refers to the process of resolving disputes through the court system. It is a formal legal mechanism where parties bring their cases before a judge or tribunal for determination. At our firm, litigation is always the last resort.",
+
+  //   sections: [
+  //     {
+  //       heading: "What is Litigation?",
+  //       content: `
+  //         Litigation refers to the process of resolving disputes through the court system. It is a formal legal mechanism where parties bring their cases before a judge or tribunal for determination. Litigation may be civil (involving private disputes) or criminal (involving offences prosecuted by the state).
+
+  //         At its core, litigation seeks justice and legal redress, but it can be time-consuming, emotionally draining, and financially demanding.
+  //       `
+  //     },
+  //     {
+  //       heading: "Our Policy on Litigation",
+  //       content: `
+  //         At our firm, litigation is always the last resort. We believe that not every conflict requires a courtroom. Our first priority is to help clients resolve disputes amicably through Alternative Dispute Resolution (ADR).
+
+  //         We advise clients to exhaust all non-contentious options first. Only when resolution remains impossible do we turn to the courts. Where litigation becomes absolutely necessary, our firm maintains a network of trusted **external litigation partners** who handle the proceedings on our behalf, under our guidance and supervision.
+  //       `
+  //     },
+  //     {
+  //       heading: "Civil Actions",
+  //       content: `Civil actions are legal proceedings between private individuals or organizations seeking to enforce a right, or to obtain compensation for a wrong (e.g., breach of contract, land ownership, debt recovery). The goal is to restore rights or recover losses, not to punish.`,
+  //       subSections: [
+  //         {
+  //           title: "Pre-Action Stage",
+  //           details:
+  //             "Exploring settlement or ADR options; issuing a pre-action protocol or letter of demand."
+  //         },
+  //         {
+  //           title: "Filing of Originating Processes",
+  //           details:
+  //             "Claimant files a Writ of Summons, Statement of Claim, and supporting documents at the appropriate court."
+  //         },
+  //         {
+  //           title: "Pleadings Stage",
+  //           details:
+  //             "Parties exchange written pleadings (Statement of Claim, Defence, Reply), setting out their respective cases."
+  //         },
+  //         {
+  //           title: "Trial and Judgment",
+  //           details:
+  //             "Parties present evidence and arguments, followed by the court delivering its binding decision."
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       heading: "Criminal Actions",
+  //       content: `Criminal actions are legal proceedings initiated by the State against an individual or organization accused of committing an offence (e.g., theft, fraud, assault). The key objective is justice, deterrence, and the protection of the public.`,
+  //       subSections: [
+  //         {
+  //           title: "Chronology",
+  //           details:
+  //             "Investigation → Arrest → Prosecution/Charging → Arraignment and Plea → Trial → Judgment → Sentencing."
+  //         },
+  //         {
+  //           title: "Our Role in Criminal Matters",
+  //           details:
+  //             "We focus on **advisory, preventive, and compliance-related services**. We guide clients during investigations, assist with compliance policies (anti-corruption, data protection), and engage external criminal specialists if a matter proceeds to prosecution."
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       heading: "Advantages vs. Disadvantages",
+  //       content: ``,
+  //       subSections: [
+  //         {
+  //           title: "Advantages",
+  //           details:
+  //             "Provides a binding and enforceable judgment, allows for legal precedent, and offers structured procedural safeguards and appeal options."
+  //         },
+  //         {
+  //           title: "Disadvantages",
+  //           details:
+  //             "Often expensive and time-consuming, can strain relationships, lacks flexibility (outcome strictly determined by the court), and involves public proceedings."
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // }
 };

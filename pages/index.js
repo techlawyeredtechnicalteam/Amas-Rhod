@@ -121,31 +121,27 @@ export default function Home({ posts }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 {" "}
                 {focusAreas.map((area, idx) => (
-                  <a
+                  <div
                     key={idx}
-                    href={`/focus-areas/${area.slug}`}
-                    className="block rounded-lg overflow-hidden shadow-xl group transition duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-2xl"
+                    className="bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-white/10 transition duration-300"
                   >
-                    {" "}
-                    <div className="relative h-56 w-full">
-                      {" "}
-                      <Image
-                        src={area.image}
-                        alt={area.title}
-                        fill
-                        className="object-cover object-center transition duration-500 ease-in-out group-hover:opacity-80"
-                      />
-                      {/* Overlay for the title */}{" "}
-                      <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end justify-start p-4">
-                        {" "}
-                        <h4 className="text-2xl font-bold text-white leading-snug">
-                          {area.title}{" "}
-                        </h4>
-                      </div>{" "}
-                    </div>{" "}
-                  </a>
+                    <h3 className="text-2xl font-garamond font-bold mb-4 text-white">
+                      {area.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {area.description}
+                    </p>
+                  </div>
                 ))}{" "}
               </div>{" "}
+              <div className="mt-12">
+                <a
+                  href="/focus-areas"
+                  className="inline-block bg-white text-blue-950 font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300"
+                >
+                  View All Practice Areas
+                </a>
+              </div>
             </div>{" "}
           </section>
 

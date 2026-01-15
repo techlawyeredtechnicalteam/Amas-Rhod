@@ -6,6 +6,14 @@ import { Menu, X } from "lucide-react";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const navItems = [
+    { name: "About", href: "/about" },
+    { name: "Attorneys", href: "/attorneys" },
+    { name: "Practice Areas", href: "/focus-areas" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" }
+  ];
+
   return (
     <header className="bg-gray-50 sticky top-0 z-20 text-blue-950 py-6 px-8 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
@@ -21,7 +29,17 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-8">
-          {["About", "Attorneys", "Practice Areas", "Blog", "Contact"].map(
+          {navItems.map((item, idx) => (
+            <Link
+              key={idx}
+              href={item.href}
+              className="relative group font-semibold tracking-wide hover:text-blue-800 transition-colors"
+            >
+              {item.name}
+              {/* <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-950 transition-all group-hover:w-full"></span> */}
+            </Link>
+          ))}
+          {/* {["About", "Attorneys", "Practice Areas", "Blog", "Contact"].map(
             (item, idx) => (
               <Link
                 key={idx}
@@ -33,11 +51,10 @@ export default function Header() {
                 className="relative group font-semibold tracking-wide"
               >
                 {item}
-                {/* <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span> */}
-                
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
               </Link>
             )
-          )}
+          )} */}
         </nav>
 
         {/* Mobile Menu Toggle Button */}
@@ -52,10 +69,24 @@ export default function Header() {
       {/* Mobile Nav Links */}
       {menuOpen && (
         <div className="md:hidden mt-4 px-4 py-4 bg-gray-50 rounded-lg text-blue-950 space-y-4 transition-all">
-          <Link href="/" className="font-semibold block">
+          <Link
+            href="/"
+            className="font-semibold block"
+            onClick={() => setMenuOpen(false)}
+          >
             Home
           </Link>
-          {["About", "Attorneys", "Practice Areas", "Blog", "Contact"].map(
+          {navItems.map((item, idx) => (
+            <Link
+              key={idx}
+              href={item.href}
+              className="block font-semibold hover:text-blue-800"
+              onClick={() => setMenuOpen(false)}
+            >
+              {item.name}
+            </Link>
+          ))}
+          {/* {["About", "Attorneys", "Practice Areas", "Blog", "Contact"].map(
             (item, idx) => (
               <Link
                 key={idx}
@@ -69,7 +100,7 @@ export default function Header() {
                 {item}
               </Link>
             )
-          )}
+          )} */}
         </div>
       )}
     </header>
