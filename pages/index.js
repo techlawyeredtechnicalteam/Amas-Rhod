@@ -155,7 +155,7 @@ export default function Home({ posts }) {
                 {/* Card 1 */}
                 <div className="relative rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="/buildings.png"
+                    src="/mission.png"
                     alt="Dispute Resolution"
                     width={600}
                     height={256}
