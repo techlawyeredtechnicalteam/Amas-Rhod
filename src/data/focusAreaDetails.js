@@ -197,7 +197,7 @@ export const focusAreaDetails = {
         ]
       },
       {
-        heading: "2.6 How can we help?",
+        heading: "2.5 How can we help?",
         content: `We help clients protect their rights, maximize earnings, and minimize risks by bridging the gap between creativity and compliance.`,
         subSections: [
           {
@@ -299,7 +299,7 @@ export const focusAreaDetails = {
         ]
       },
       {
-        heading: "3.6 How can we help?",
+        heading: "3.5 How can we help?",
         content: `We assist clients in navigating the complexities of land transactions by providing reliable, efficient, and transparent legal solutions.`,
         subSections: [
           {
@@ -406,7 +406,7 @@ export const focusAreaDetails = {
         ]
       },
       {
-        heading: "4.6 How can we help?",
+        heading: "4.5 How can we help?",
         content: `We help clients navigate sensitive family matters with professionalism, compassion, and discretion, focusing on sound legal advice and amicable settlement.`,
         subSections: [
           {
@@ -501,7 +501,7 @@ export const focusAreaDetails = {
         ]
       },
       {
-        heading: "5.6 How can we help?",
+        heading: "5.5 How can we help?",
         content: `We offer practical, solution-driven immigration advisory and representation services designed to simplify compliance and protect clients’ legal interests.`,
         subSections: [
           {
