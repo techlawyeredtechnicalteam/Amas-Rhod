@@ -78,7 +78,7 @@ export const focusAreaDetails = {
         ]
       },
       {
-        heading: "1.6 How can we help?",
+        heading: "1.5 How can we help?",
         content: `We provide strategic and practical legal solutions tailored to prevent disputes, ensure compliance, and protect commercial interests.`,
         subSections: [
           {
