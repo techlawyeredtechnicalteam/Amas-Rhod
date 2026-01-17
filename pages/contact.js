@@ -116,7 +116,7 @@ const Contact = () => {
               className="lg:col-span-2"
             >
               <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-2">
-                <div className="flex items-start mb-4">
+                {/* <div className="flex items-start mb-4">
                   <MapPin className="text-blue-950 mt-1 mr-4" />
                   <div>
                     <h3 className="font-semibold text-blue-950 text-lg">
@@ -130,7 +130,7 @@ const Contact = () => {
                       Lagos, Nigeria.
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start mb-4">
                   <Phone className="text-blue-950 mt-1 mr-4" />

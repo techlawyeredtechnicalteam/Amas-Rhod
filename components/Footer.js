@@ -66,13 +66,13 @@ export default function Footer() {
         {/* Contact Information */}
         <div className="flex flex-col space-y-2">
           <h4 className="text-2xl font-garamond mb-4">Contact Details</h4>
-          <address className="not-italic text-lg">
+          {/* <address className="not-italic text-lg">
             Emerge Hub No 4 Ayanboye street,
             <br />
             faramobi Ajike street Anthony village,
             <br />
             Lagos, Nigeria.
-          </address>
+          </address> */}
           <p className="mt-4 text-lg">
             Phone:{" "}
             <a href="tel:+2348134642665" className="hover:underline">
