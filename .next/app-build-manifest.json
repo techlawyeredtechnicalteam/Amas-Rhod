@@ -7,12 +7,19 @@
       "static/chunks/main-app-82cf27c6a702f2fb.js",
       "static/chunks/app/_not-found/page-6aeddbcec54138a9.js"
     ],
+    "/api/twitter/route": [
+      "static/chunks/webpack-22e08ffc87fe5d61.js",
+      "static/chunks/4bd1b696-182b6b13bdad92e3.js",
+      "static/chunks/1255-2515ec02460e7abe.js",
+      "static/chunks/main-app-82cf27c6a702f2fb.js",
+      "static/chunks/app/api/twitter/route-b5b6a88c35d45dc4.js"
+    ],
     "/layout": [
       "static/chunks/webpack-22e08ffc87fe5d61.js",
       "static/chunks/4bd1b696-182b6b13bdad92e3.js",
       "static/chunks/1255-2515ec02460e7abe.js",
       "static/chunks/main-app-82cf27c6a702f2fb.js",
-      "static/chunks/app/layout-270ca2a92d9ba16d.js"
+      "static/chunks/app/layout-b5b6a88c35d45dc4.js"
     ],
     "/studio/[[...tool]]/page": [
       "static/chunks/webpack-22e08ffc87fe5d61.js",

@@ -13,6 +13,7 @@ import { getStaticProps } from "../src/services/BlogStaticProps";
 // import TwitterFeed from "../components/TwitterFeed";
 import LinkedInFeed from "../components/LinkedInFeed";
 import BlogPostGrid from "./BlogPostSlider";
+import TwitterFeed from "../components/TwitterFeed";
 
 export { getStaticProps };
 
@@ -286,7 +287,9 @@ export default function Home({ posts }) {
           {/* Blog */}
           <BlogPostGrid posts={posts} showAll={false} maxPosts={3} />
           {/* LinkedIn Feed */}
-          <LinkedInFeed companyId="amasandrhodlaw" />
+          {/* <LinkedInFeed companyId="amasandrhodlaw" />           */}
+          {/* Twitter Feed */}
+          <TwitterFeed username="amasandrhodlaw" />
         </main>
       </div>
     </Layout>
