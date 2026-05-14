@@ -11,7 +11,8 @@ export default function Header() {
     { name: "Attorneys", href: "/attorneys" },
     { name: "Practice Areas", href: "/focus-areas" },
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" }
+    { name: "Contact", href: "/contact" },
+    { name: "Book Appointment", href: "https://calendly.com/amasandrhodlaw-info/new-meeting",target:"_blank" }
   ];
 
   return (
@@ -33,6 +34,7 @@ export default function Header() {
             <Link
               key={idx}
               href={item.href}
+              target={item.target?item.target:""}
               className="relative group font-semibold tracking-wide hover:text-blue-800 transition-colors"
             >
               {item.name}
@@ -80,6 +82,7 @@ export default function Header() {
             <Link
               key={idx}
               href={item.href}
+              target={item.target?item.target:""}
               className="block font-semibold hover:text-blue-800"
               onClick={() => setMenuOpen(false)}
             >
