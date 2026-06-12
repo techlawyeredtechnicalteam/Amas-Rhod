@@ -287,7 +287,7 @@ export default function Home({ posts }) {
           </section>
           {/* Blog */}
           <BlogPostGrid posts={posts} showAll={false} maxPosts={3} />
-          <section className="py-24 bg-gray-50 px-6 bg-[#f5f5f5]">
+          <section className="py-24 bg-gray-50 px-6 bg-gray-200">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               {/* Flyer Image Area */}
               <div className="w-full relative rounded-xl overflow-hidden shadow-lg h-[400px] md:h-[500px] bg-gray-200 flex items-center justify-center">
