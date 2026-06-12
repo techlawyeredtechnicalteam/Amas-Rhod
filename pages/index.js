@@ -295,7 +295,9 @@ export default function Home({ posts }) {
                 
                 <Image 
                   src="/webinar.png" 
-                  alt="Webinar Flyer" 
+                  alt="Webinar Flyer"  
+                    width={600}
+                    height={500}
                   className="object-cover w-full h-[400px] md:h-[500px]"
                   unoptimized
                 /> 
