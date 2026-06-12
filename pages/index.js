@@ -69,12 +69,13 @@ export default function Home({ posts }) {
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Law in action. Protection in motion; Our Lawyers are working!
               </p>
-              {/* <a
-                href="#contact"
+              <a
+                href="https://calendly.com/amasandrhodlaw-info/new-meeting"
+                target="_blank"
                 className="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300"
               >
-                Schedule a Consultation
-              </a> */}
+                Book Appointment
+              </a>
             </div>
           </section>
 
@@ -286,10 +287,62 @@ export default function Home({ posts }) {
           </section>
           {/* Blog */}
           <BlogPostGrid posts={posts} showAll={false} maxPosts={3} />
+          <section className="py-24 bg-gray-50 px-6">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              {/* Flyer Image Area */}
+              <div className="w-full relative rounded-xl overflow-hidden shadow-lg h-[400px] md:h-[500px] bg-gray-200 flex items-center justify-center">
+               
+                
+                <Image 
+                  src="/webinar.jpg" 
+                  alt="Webinar Flyer" 
+                  fill 
+                  className="object-cover" 
+                /> 
+               
+              </div>
+
+              {/* Webinar Details & QR Code */}
+              <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                <h2 className="text-4xl font-garamond font-bold mb-4 text-blue-950">
+                  Join Our Upcoming Webinar
+                </h2>
+                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                  Ready to gain invaluable legal insights? Scan the QR code
+                  below or click the link to register for our upcoming event.
+                  Secure your spot today!
+                </p>
+
+                <a
+                  href="https://form.jotform.com/261574461243355"
+                  rel="nofollow noreferrer"
+                  target="_blank"
+                  className="block p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 mb-6"
+                >
+                  <img
+                    src="https://eu.jotform.com/uploads/amasattorneys/form_files/261574461243355_1780850814_qrcode_muse.png"
+                    width="100%"
+                    style={{ maxWidth: "200px" }}
+                    alt="QR Code for Jotform form"
+                    className="mx-auto"
+                  />
+                </a>
+
+                <a
+                  href="https://form.jotform.com/261574461243355"
+                  rel="nofollow noreferrer"
+                  target="_blank"
+                  className="bg-blue-950 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-800 transition duration-300"
+                >
+                  Register Now
+                </a>
+              </div>
+            </div>
+          </section>
           {/* LinkedIn Feed */}
           {/* <LinkedInFeed companyId="amasandrhodlaw" />           */}
           {/* Twitter Feed */}
-          <TwitterFeed username="amasandrhodlaw" />
+          {/* <TwitterFeed username="amasandrhodlaw" /> */}
         </main>
       </div>
     </Layout>
