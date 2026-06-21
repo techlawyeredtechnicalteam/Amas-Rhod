@@ -205,7 +205,7 @@ export default function Home({ posts }) {
           <section className="bg-blue-950 py-24 px-6 md:px-16 text-center overflow-hidden">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl font-garamond md:text-5xl font-bold mb-6 text-white">
-                Client Testimonials
+                Client Feedbacks
               </h2>
               <p className="text-lg text-gray-400 mb-16">
                 Hear directly from those we've helped achieve success.
