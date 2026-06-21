@@ -44,7 +44,7 @@ export default function BlogPostGrid({
             insights purposes <strong>ONLY</strong> and should not be construed as legal advice.
             For legal advice and guidance regarding your situation, please{" "}
             
-              href="/contact"
+            <a href="/contact"
               style={{ color: "#92400e", textDecoration: "underline", fontWeight: 600 }}
             >
               book an appointment
