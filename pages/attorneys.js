@@ -10,7 +10,7 @@ const attorneys = [
     name: "Temilorun F. Komolafe, Esq.",
     credentials: "LL.M, ACIARB, MIMA (UK)",
     title: "Principal Counsel",
-    image: "/Media.jpg",
+    image: "/Media.png",
     admissions: [
       "Solicitor of the Senior Courts of England and Wales (SRA)",
       "Barrister and Solicitor of the Supreme Court of Nigeria",
