@@ -380,7 +380,7 @@ export default function Attorneys() {
                 aria-label={`View profile of ${a.name}`}
               >
                 <div className="atty-img-wrap">
-                  <Image src={a.image} alt={a.name} fill style={{ objectFit: "cover" }} />
+                  <Image src={a.image} alt={a.name} fill style={{ objectFit: "cover" }} unoptimized />
                 </div>
                 <div className="atty-card-body">
                   <h3 className="atty-card-name">{a.name}</h3>
