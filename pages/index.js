@@ -11,6 +11,8 @@ import { testimonials } from "../src/data/testimonial";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { getStaticProps } from "../src/services/BlogStaticProps";
 // import TwitterFeed from "../components/TwitterFeed";
+import latestWebinarFlyer from "../public/latest_webinar_flyer.jpg";
+import latestWebinarQrCode from "../public/latest_webinar_qrcode.jpg";
 import LinkedInFeed from "../components/LinkedInFeed";
 import BlogPostGrid from "./BlogPostSlider";
 import TwitterFeed from "../components/TwitterFeed";
@@ -294,10 +296,8 @@ export default function Home({ posts }) {
               {/* Flyer Image Area */}
               <div className="w-full relative rounded-xl overflow-hidden shadow-lg min-h-[400px] md:min-h-[500px] bg-gray-200 flex items-center justify-center">
                 <Image
-                  src="/latest_webinar_flyer.jpg"
+                  src={latestWebinarFlyer}
                   alt="Webinar Flyer"
-                  width={600}
-                  height={500}
                   className="object-cover w-full h-full"
                   unoptimized
                 />
@@ -319,12 +319,13 @@ export default function Home({ posts }) {
                   target="_blank"
                   className="block p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 mb-6"
                 >
-                  <img
-                    src="/latest_webinar_qrcode.jpg"
-                    width="100%"
-                    style={{ maxWidth: "200px" }}
+                  <Image
+                    src={latestWebinarQrCode}
                     alt="QR Code for Jotform form"
-                    className="mx-auto"
+                    width={200}
+                    height={200}
+                    className="mx-auto h-auto w-full max-w-[200px]"
+                    unoptimized
                   />
                 </a>
 
