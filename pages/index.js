@@ -287,24 +287,22 @@ export default function Home({ posts }) {
           </section>
           {/* Blog */}
           <BlogPostGrid posts={posts} showAll={false} maxPosts={3} />
+
+          {/* Webinar Details & QR Code */}
           <section className="py-24 px-6 bg-gray-200">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               {/* Flyer Image Area */}
-              <div className="w-full relative rounded-xl overflow-hidden shadow-lg h-[400px] md:h-[500px] bg-gray-200 flex items-center justify-center">
-               
-                
-                <Image 
-                  src="/webinar.png" 
-                  alt="Webinar Flyer"  
-                    width={600}
-                    height={500}
-                  className="object-cover w-full h-[400px] md:h-[500px]"
+              <div className="w-full relative rounded-xl overflow-hidden shadow-lg min-h-[400px] md:min-h-[500px] bg-gray-200 flex items-center justify-center">
+                <Image
+                  src="/latest_webinar_flyer.jpg"
+                  alt="Webinar Flyer"
+                  width={600}
+                  height={500}
+                  className="object-cover w-full h-full"
                   unoptimized
-                /> 
-               
+                />
               </div>
 
-              {/* Webinar Details & QR Code */}
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <h2 className="text-4xl font-garamond font-bold mb-4 text-blue-950">
                   Join Our Upcoming Webinar
@@ -316,13 +314,13 @@ export default function Home({ posts }) {
                 </p>
 
                 <a
-                  href="https://form.jotform.com/261574461243355"
+                  href="https://form.jotform.com/261962400497360"
                   rel="nofollow noreferrer"
                   target="_blank"
                   className="block p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 mb-6"
                 >
                   <img
-                    src="https://eu.jotform.com/uploads/amasattorneys/form_files/261574461243355_1780850814_qrcode_muse.png"
+                    src="/latest_webinar_qrcode.jpg"
                     width="100%"
                     style={{ maxWidth: "200px" }}
                     alt="QR Code for Jotform form"
@@ -331,7 +329,7 @@ export default function Home({ posts }) {
                 </a>
 
                 <a
-                  href="https://form.jotform.com/261574461243355"
+                  href="https://form.jotform.com/261962400497360"
                   rel="nofollow noreferrer"
                   target="_blank"
                   className="bg-blue-950 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-800 transition duration-300"
