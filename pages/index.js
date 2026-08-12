@@ -11,8 +11,7 @@ import { testimonials } from "../src/data/testimonial";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { getStaticProps } from "../src/services/BlogStaticProps";
 // import TwitterFeed from "../components/TwitterFeed";
-import latestWebinarFlyer from "../public/latest_webinar_flyer.jpg";
-import latestWebinarQrCode from "../public/latest_webinar_qrcode.jpg";
+import webinar from "../public/webinar.png";
 import LinkedInFeed from "../components/LinkedInFeed";
 import BlogPostGrid from "./BlogPostSlider";
 import TwitterFeed from "../components/TwitterFeed";
@@ -290,14 +289,14 @@ export default function Home({ posts }) {
           {/* Blog */}
           <BlogPostGrid posts={posts} showAll={false} maxPosts={3} />
 
-          {/* Webinar Details & QR Code */}
+          {/* Past Webinar */}
           <section className="py-24 px-6 bg-gray-200">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               {/* Flyer Image Area */}
               <div className="w-full relative rounded-xl overflow-hidden shadow-lg min-h-[400px] md:min-h-[500px] bg-gray-200 flex items-center justify-center">
                 <Image
-                  src={latestWebinarFlyer}
-                  alt="Webinar Flyer"
+                  src={webinar}
+                  alt="Webinar"
                   className="object-cover w-full h-full"
                   unoptimized
                 />
@@ -305,38 +304,12 @@ export default function Home({ posts }) {
 
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <h2 className="text-4xl font-garamond font-bold mb-4 text-blue-950">
-                  Join Our Upcoming Webinar
+                  Our First Webinar
                 </h2>
-                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  Ready to gain invaluable legal insights? Scan the QR code
-                  below or click the link to register for our upcoming event.
-                  Secure your spot today!
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Thank you for your interest in our first webinar. Registration
+                  for this event is now closed.
                 </p>
-
-                <a
-                  href="https://form.jotform.com/261962400497360"
-                  rel="nofollow noreferrer"
-                  target="_blank"
-                  className="block p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 mb-6"
-                >
-                  <Image
-                    src={latestWebinarQrCode}
-                    alt="QR Code for Jotform form"
-                    width={200}
-                    height={200}
-                    className="mx-auto h-auto w-full max-w-[200px]"
-                    unoptimized
-                  />
-                </a>
-
-                <a
-                  href="https://form.jotform.com/261962400497360"
-                  rel="nofollow noreferrer"
-                  target="_blank"
-                  className="bg-blue-950 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-800 transition duration-300"
-                >
-                  Register Now
-                </a>
               </div>
             </div>
           </section>

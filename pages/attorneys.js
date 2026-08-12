@@ -100,7 +100,7 @@ export default function Attorneys() {
   return (
     <Layout>
       <Head>
-        <title>Amas & Rhod Law | Attorneys</title>
+        <title>Amas & Rhod Law | Our Team</title>
       </Head>
 
       <style>{`
@@ -364,7 +364,7 @@ export default function Attorneys() {
       <div className="atty-page">
         <div className="atty-inner">
           <div className="atty-header">
-            <h1>Meet Our Attorneys</h1>
+            <h1>Meet Our Team</h1>
             <p>A team of passionate legal professionals committed to excellence and justice.</p>
           </div>
 

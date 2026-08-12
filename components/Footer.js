@@ -60,6 +60,19 @@ export default function Footer() {
                 <i className="fab fa-whatsapp"></i>
               </a>
             </div>
+            <a
+              href="https://soundbetter.com/profiles/474392-amas-&-rhod-law"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Amas & Rhod Law profile on SoundBetter"
+              className="inline-block"
+            >
+              <img
+                alt="Amas & Rhod Law on SoundBetter"
+                src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg"
+                className="w-full max-w-[130px]"
+              />
+            </a>
           </div>
         </div>
 
