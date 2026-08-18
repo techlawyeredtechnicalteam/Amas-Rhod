@@ -12,7 +12,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { getStaticProps } from "../src/services/BlogStaticProps";
 // import TwitterFeed from "../components/TwitterFeed";
 import latestWebinarFlyer from "../public/latest_webinar_flyer.jpg";
-import pastWebinarFlyer from "../public/webinar.jpg";
+import pastWebinarFlyer from "../public/webinar.png";
 import LinkedInFeed from "../components/LinkedInFeed";
 import BlogPostGrid from "./BlogPostSlider";
 import TwitterFeed from "../components/TwitterFeed";
