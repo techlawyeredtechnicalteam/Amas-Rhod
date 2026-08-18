@@ -14,6 +14,7 @@ import { getStaticProps } from "../src/services/BlogStaticProps";
 import latestWebinarFlyer from "../public/latest_webinar_flyer.jpg";
 import pastWebinarFlyer from "../public/webinar.png";
 import LinkedInFeed from "../components/LinkedInFeed";
+import GalleryMarquee from "../components/GalleryMarquee";
 import BlogPostGrid from "./BlogPostSlider";
 import TwitterFeed from "../components/TwitterFeed";
 
@@ -327,6 +328,8 @@ export default function Home({ posts }) {
           </section>
           {/* Blog */}
           <BlogPostGrid posts={posts} showAll={false} maxPosts={3} />
+
+          <GalleryMarquee />
 
           {/* Past Webinars */}
           <section className="py-24 px-6 bg-gray-200 overflow-hidden">

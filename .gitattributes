@@ -4,3 +4,5 @@
 *.jpeg filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 public/latest_webinar_*.jpg -filter -diff -merge -text
+public/*.jpeg -filter -diff -merge -text
+public/*.JPEG -filter -diff -merge -text
