@@ -14,11 +14,11 @@ export default function PracticeAreas() {
   const areaImages = {
     "maritime-law": "/maritime-law.png",
     "entertainment-law": "/entertainment-law.png",
-    "immigration-law": "/immigration-law.png",
-    "family-law": "/family-law.png",
+    "immigration-law": "/immigration-law.webp",
+    "family-law": "/family-law.webp",
     "property-law": "/property-law.png",
     "alternative-to-dispute-resolutions": "/adr.png",
-    litigation: "/litigation.png"
+    litigation: "/litigation.webp"
   };
 
   return (

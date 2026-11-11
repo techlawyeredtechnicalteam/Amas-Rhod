@@ -334,7 +334,7 @@ export const focusAreaDetails = {
 
   // --- 4.0 FAMILY LAW ---
   "family-law": {
-    mainImage: "/family-law.png",
+    mainImage: "/family-law.webp",
     title: "Family Law",
     intro:
       "Family law governs legal relationships within the family unit, addressing rights, duties, and obligations that arise between spouses, parents, and children. Its goal is to promote fairness, protect vulnerable members, and preserve the welfare of children and dependants.",
@@ -436,7 +436,7 @@ export const focusAreaDetails = {
 
   // --- 5.0 IMMIGRATION LAW ---
   "immigration-law": {
-    mainImage: "/immigration-law.png",
+    mainImage: "/immigration-law.webp",
     title: "Immigration Law",
     intro:
       "Immigration law regulates the entry, residence, employment, and exit of persons into and out of a country. Its objective is to ensure lawful migration, national security, and compliance with visa and work permit regulations.",
@@ -584,7 +584,7 @@ export const focusAreaDetails = {
   // },
 
   // litigation: {
-  //   mainImage: "/litigation.png",
+  //   mainImage: "/litigation.webp",
   //   title: "Litigation",
   //   intro:
   //     "Litigation refers to the process of resolving disputes through the court system. It is a formal legal mechanism where parties bring their cases before a judge or tribunal for determination. At our firm, litigation is always the last resort.",

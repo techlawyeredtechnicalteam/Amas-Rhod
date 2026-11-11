@@ -18,14 +18,14 @@
 //   {
 //     title: "Immigration Law",
 //     slug: "immigration-law",
-//     image: "/immigration-law.png",
+//     image: "/immigration-law.webp",
 //     description:
 //       "Immigration law regulates the entry, residence, employment, and exit ofpersons into and out of a country. It governs how foreign nationals are admitted, their legal status while in the country..."
 //   },
 //   {
 //     title: "Family law",
 //     slug: "family-law",
-//     image: "/family-law.png",
+//     image: "/family-law.webp",
 //     description:
 //       "Family law governs legal relationships within the family unit, addressing rights, duties, and obligations that arise between spouses, parents, and children..."
 //   },
